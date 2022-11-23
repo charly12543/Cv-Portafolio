@@ -36,16 +36,16 @@
             </a>
             <ul class="navbar-nav d-flex justify-content-center align-items-center">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Inicio</a>
+                <a class="nav-link " aria-current="page" href="#inicio">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sobre mi</a>
+                <a class="nav-link" href="#sobre-mi">Sobre mi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Mis proyectos</a>
+                <a class="nav-link" aria-current="page" href="#proyectos">Mis proyectos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Contacto</a>
+                <a class="nav-link" aria-current="page" href="#contacto">Contacto</a>
               </li>
             </ul>
           </div>
@@ -53,19 +53,19 @@
       </nav>
 
     <!--Seccion hero-->
-    <section class="hero align-items-stretch">
+    <section class="hero align-items-stretch" id="inicio">
         <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
           <img class="hero-foto-perfil" src="imagenes/foto.jpg" alt="foto-perfil">
           <h1>Saludos, Soy Carlos Bustamante</h1>
           <h2>Ofrezco mis servicios como Desarrollador</h2>
         </div>
         <div class="hero-inferior d-flex flex-column justify-content-center align-items-center">
-            <img class="hero-inferior-imagen img-fluid" src="imagenes/pc-gatito.png" alt="">
+            <img class="hero-inferior-imagen img-fluid" src="imagenes/laptop.jpg" alt="">
         </div>
     </section>
 
     <!--Sobre mi-->
-    <section class="sobre-mi seccion-oscura">
+    <section class="sobre-mi seccion-oscura" id="sobre-mi">
         <div class="contenedor">
             <h2 class="seccion-titulo">Sobre mi</h2>
             <p class="seccion-texto">
@@ -94,7 +94,8 @@
                         <span class="badge text-bg-primary">Back-End</span>
                         <span class="badge text-bg-primary">MySql</span>
                         <span class="badge text-bg-primary">Toad for Oracle</span>
-                        <span class="badge text-bg-primary">Metodologia:Scrum</span>
+                        <span class="badge text-bg-primary">Metodologia: <br>
+                          Scrum</span>
                     </div>
                 </div>
                   <!--Repositorios-->
@@ -132,10 +133,7 @@
                         <span class="badge text-bg-primary">Visual Studio Code</span>
                         <span class="badge text-bg-primary">Toad for oracle</span>
                     </div>
-                    <div>
-                      <p>Metodologias::</p>
-                        <span class="badge text-bg-primary">Scrum</span>
-                    </div>
+                   
                 </div>
 
             </div>
@@ -144,7 +142,7 @@
     </section>
 
     <!--Proyectos-->
-    <section class="proyectos-recientes seccion-clara d-flex flex-column">
+    <section class="proyectos-recientes seccion-clara d-flex flex-column" id="proyectos">
             <h2 class="seccion-titulo texo-negro">Mis proyectos recientes</h2>
             <h3 class="seccion-descripcion">Estos son algunos de mis proyectos creados recientemente</h3>
               <!--galeria-->
@@ -202,14 +200,15 @@
                 </div>
 
             </div>
+            <!--                                BOTON DE ENLANCE A MAS PROYECTOSDESACTIVADO
             <button type="button" class="btn btn-info">
               Ver mas proyectos
               <i class="bi bi-arrow-right-circle"></i>
-            </button>
+            </button>-->
     </section>
 
     <!--Contacto-->
-    <section class="contacto seccion-azul">
+    <section class="contacto seccion-azul" id="contacto">
       <div class="container">
         <div class="container rectangulo text-center d-flex justify-content-evenly">
           <div class="row">

@@ -68,8 +68,8 @@ h1{
     padding: 3rem;
 }
 .hero-foto-perfil{
-    height: 140px;
-    width: 100px;
+    height: 150px;
+    width: 110px;
     border-radius: 50%;
     margin: 20px;
 }
@@ -80,6 +80,8 @@ h1{
 .hero-inferior-imagen{
     border-radius: 50px;
     margin: 1px;
+    height: 145px;
+    width: 225px;
 }
 
     /*Sobre mi*/
