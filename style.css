@@ -33,3 +33,7 @@ h2 {
     width: 100%;
 
 }
+
+.gallery img:hover{
+    transform: scale(1.2);
+}
