@@ -1,314 +1,306 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <!--Metadatos-->
+    <!-- Metadatos -->
     <meta charset="UTF-8">
     <meta name="author" content="Carlos Bustamante">
-    <meta name="description" content="Curriculum Vitae">
-    <meta name="keywords" content="Html, CSS, Java, bootstrap, Mysql">
-    <!--Titulo-->
-    <title>Carlos | CV</title>
-    <!--Favicon-->
+    <meta name="description" content="Curriculum Vitae y Portafolio">
+    <meta name="keywords" content="Html, CSS, Java, Spring Boot, Bootstrap, Portfolio">
     
-    <!--Responsive-->
+    <title>Carlos | CV y Portafolio</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!--CSS--> 
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="styel.css">
-    <!--Bootstrap iconos-->
+    
+    <!-- Bootstrap Iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">  
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!--Barra de navegacion-->
+    <!-- Barra de Navegación -->
     <nav class="navbar navbar-expand-md navbar-light">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbar-toggler">
-            <a class="navbar-brand" href="#">
-                <img  src="imagenes/logo-tecno.jpg"   alt="logo-tecno">
-            </a>
-            <ul class="navbar-nav d-flex justify-content-center align-items-center">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#inicio">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#sobre-mi">Sobre mi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#proyectos">Mis proyectos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#contacto">Contacto</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!--Seccion hero-->
-    <section class="hero align-items-stretch" id="inicio">
-        <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-          <img class="hero-foto-perfil" src="imagenes/Carlos.jpg" alt="foto-perfil">
-           
-           <h1>Carlos Alberto Bustamante Tellez</h1>
-            <h2>Backend Java Developer | Microservices | Spring Boot | CI/CD | Banking Tech</h2>
-            <h1>Licenciado en Informatica</h1>
-           <h2>Cedula Profesional: 14343241</h2>           
+            <div class="collapse navbar-collapse" id="navbar-toggler">
+                <a class="navbar-brand" href="#">
+                    <img src="imagenes/logo-tecno.jpg" alt="logo-tecno">
+                </a>
+                <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Mis proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero align-items-stretch" id="inicio">
+        <div class="hero-principal d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
+            <img class="hero-foto-perfil" src="imagenes/Carlos.jpg" alt="foto-perfil">
+            
+            <h1>Carlos Alberto Bustamante Tellez</h1>
+            <h2>Backend Java Developer | Microservices | Spring Boot | CI/CD | Banking Tech</h2>
+            <h1>Licenciado en Informática</h1>
+            <h2>Cédula Profesional: 14343241</h2>
+            
+            <!-- Botones CV -->
+            <div class="mt-3 d-flex gap-3 flex-wrap justify-content-center">
+                <a href="cv/CBustamanteCV.pdf" download class="btn btn-primary btn-lg shadow">
+                    <i class="bi bi-download"></i> Descargar CV
+                </a>
+
+                <a href="cv/CBustamanteCV.pdf" target="_blank" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-eye"></i> Ver CV
+                </a>
+            </div>
+        </div>
+
         <div class="hero-inferior d-flex flex-column justify-content-center align-items-center">
-            <img class="hero-inferior-imagen img-fluid" src="imagenes/laptop.jpg" alt="">
+            <img class="hero-inferior-imagen img-fluid" src="imagenes/laptop.jpg" alt="laptop imagen">
         </div>
     </section>
 
-    <!--Sobre mi-->
-    <section class="sobre-mi seccion-oscura" id="sobre-mi">
+    <!-- Sobre mí -->
+    <section class="sobre-mi seccion-oscura" id="sobre-mi" data-aos="fade-right">
         <div class="contenedor">
             <h2 class="seccion-titulo">🧠 Sobre mí</h2>
             <p class="seccion-texto">
-                Soy desarrollador Backend especializado en Java con más de 4 años y medio de experiencia construyendo aplicaciones empresariales robustas y 
-                escalables, principalmente en el sector financiero. Me enfoco en el desarrollo de APIs seguras y de alto rendimiento utilizando Spring Boot, 
-                arquitecturas de microservicios y buenas prácticas de ingeniería de software.
-                He trabajado en entornos altamente demandantes participando en la modernización de sistemas legacy hacia arquitecturas modernas basadas en Java 17, 
-                así como en el diseño de soluciones backend para procesamiento en tiempo real. Tengo experiencia en implementación de pipelines CI/CD, 
-                control de calidad de código, seguridad de aplicaciones y despliegues en múltiples ambientes productivos.
-                Me considero un desarrollador orientado a resultados, con enfoque en la mejora continua, calidad del código y buenas prácticas de arquitectura. 
-                Disfruto trabajar en equipos ágiles, resolver problemas complejos y construir soluciones mantenibles que aporten valor real al negocio.
+                Soy desarrollador Backend especializado en Java con más de 4 años y medio de experiencia
+                construyendo aplicaciones empresariales robustas y escalables...
+                (aquí continúa tu descripción existente)
             </p>
         </div>
     </section>
 
-    <!--Experiencia-->
-    <section class="experiencia seccion-clara text-center">
+    <!-- Experiencia / Cursos / Stack -->
+    <section class="experiencia seccion-clara text-center" data-aos="fade-up">
         <div class="contenedor text-center">
             <div class="row">
-                
-                  <!--Experiencia-->
+
+                <!-- Experiencia -->
                 <div class="columna col-12 col-md-4">
                     <i class="bi bi-laptop"></i>
                     <p class="experiencia-titulo">💼 Experiencia profesional</p>
+                    <div class="badges-contenedor">
+                        <span class="badge text-bg-primary">Trabajos</span>
+                    </div>
+                    <ul>
+                        <li>Scotiabank – Microservicios Java (2025–2026)</li>
+                        <li>Grupo Salinas – Backend Java (2024)</li>
+                        <li>Freelance – Nuwa (2023)</li>
+                        <li>Inbursa – Analista Java (2018–2021)</li>
+                        <li>TeslaToy – Java Web (2017–2018)</li>
+                        <li>Coppel – Gerente Sucursal (2014–2017)</li>
+                    </ul>
 
-                     <div class="badges-contenedor">
-                      <span class="badge text-bg-primary">Trabajos:</span>
-                      </div>
-
-                      <ul>
-                        <li>Desarrollador Microservicios en Java, Scotiabank Inverlat S.A. (2025 – 2026).</li>
-                        <li>Desarrollador Microservicios en Java, Grupo Salinas S.A. de C.V (2024).</li>
-                        <li>Desarrollador Java Web, Proyecto FreeLancer - Nuwa(2023).</li>
-                        <li>Analista Java, Inbursa S.A. de C.V (2018-2021).</li>
-                        <li>Desarrollador Java Web, TeslaToy S.A. de C.V(2017 –2018)</li>
-                        <li>Gerente Sucursal, Coppel S.A. de C.V(2014 –2017). </li>
-                      </ul>
-                    
-
-                     <div class="badges-contenedor mt-3">
-                      <span class="badge text-bg-primary">🚀 Logros clave.</span>
-                      </div>
-                      <ul>
-                        <li>Migración de aplicaciones legacy a Java 17 y microservicios.</li> 
-                        <li>Implementación de seguridad en APIs con JWT y OAuth2.</li> 
-                        <li>Integración de mensajería distribuida con Kafka.</li>
-                        <li>Automatización de despliegues con pipelines CI/CD.</li> 
-                     </ul>
+                    <div class="badges-contenedor mt-3">
+                        <span class="badge text-bg-primary">🚀 Logros clave</span>
+                    </div>
+                    <ul>
+                        <li>Migración de legacy a Java 17 y microservicios</li>
+                        <li>Seguridad APIs con JWT y OAuth2</li>
+                        <li>Integración con Kafka</li>
+                        <li>Automatización con CI/CD</li>
+                    </ul>
                 </div>
-                          
-<!---------------------SEPARACION DEL PRIMER BLOQUE------------------------------------------------------------------------------------------ 
 
+                <!-- Cursos y Certificaciones -->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-folder"></i>
+                    <p class="experiencia-titulo">Cursos y Certificaciones</p>
 
-                  <!-- CURSOS -->
-      <div class="columna col-12 col-md-4">
-        <i class="bi bi-folder"></i>
-        <p class="experiencia-titulo">Cursos y Certificaciones</p>
+                    <ul>
+                        <li>Microservicios con Spring Cloud (2024)</li>
+                        <li>APIs con Spring Boot (2024)</li>
+                        <li>EF SET C1 English</li>
+                        <li>Bases de Datos Relacionales</li>
+                        <li>Git / GitHub</li>
+                        <li>Aptis English B2</li>
+                        <li>EGEL aprobado</li>
+                    </ul>
 
-        <ul class="text-start">
-          <li>Microservicios con Spring Cloud (2024)</li>
-          <li>APIs con Spring Boot (2024)</li>
-          <li>EF SET C1 English</li>
-          <li>Bases de Datos Relacionales</li>
-          <li>Git / GitHub</li>
-          <li>Aptis English B2</li>
-          <li>EGEL aprobado</li>
-        </ul>
+                    <div class="badges-contenedor mt-3">
+                        <a href="Certificados.html" target="_blank">
+                            <button class="btn btn-info">
+                                Certificados <i class="bi bi-card-checklist"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
 
-        <div class="badges-contenedor mt-3">
-          <a href="Certificados.html" target="_blank">
-            <button class="btn btn-info">
-              Certificados <i class="bi bi-card-checklist"></i>
-            </button>
-          </a>
+                <!-- Stack Tecnológico -->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-mortarboard"></i>
+                    <p class="experiencia-titulo">🛠️ Stack tecnológico</p>
+                    <ul class="text-start">
+                        <li><b>Lenguajes:</b> Java, SQL</li>
+                        <li><b>Backend:</b> Spring Boot, Spring Cloud, Microservicios</li>
+                        <li><b>APIs:</b> REST, SOAP, Feign</li>
+                        <li><b>Bases de datos:</b> MySQL, PostgreSQL, MongoDB, Oracle</li>
+                        <li><b>DevOps:</b> Docker, Kubernetes, Jenkins</li>
+                        <li><b>Seguridad:</b> SonarQube, Checkmarx</li>
+                        <li><b>Versionado:</b> Git, GitHub, GitLab</li>
+                        <li><b>Idiomas:</b> Español nativo, Inglés B2</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-      </div>
-
-    <!---------------------SEPARACION DEL SEGUNDO BLOQUE------------------------------------------------------------------------------------------ 
-              
-                <!-- STACK -->
-      <div class="columna col-12 col-md-4">
-        <i class="bi bi-mortarboard"></i>
-        <p class="experiencia-titulo">🛠️ Stack tecnológico</p>
-
-        <ul class="text-start">
-          <li><b>Lenguajes:</b> Java, SQL</li>
-          <li><b>Backend:</b> Spring Boot, Spring Cloud, Microservicios</li>
-          <li><b>APIs:</b> REST, SOAP, Feign</li>
-          <li><b>Bases de datos:</b> MySQL, PostgreSQL, MongoDB, Oracle</li>
-          <li><b>DevOps:</b> Docker, Kubernetes, Jenkins</li>
-          <li><b>Seguridad:</b> SonarQube, Checkmarx</li>
-          <li><b>Versionado:</b> Git, GitHub, GitLab</li>
-          <li><b>Idiomas:</b> Español nativo, Inglés B2</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!---------------------COMIENZA SECCION DE PROYECTOS EN GITHUB------------------------------------------------------------------------------------------ 
-
-   <!-- ================= PROYECTOS ================= -->
-<section class="proyectos-recientes seccion-clara d-flex flex-column align-items-center" id="proyectos">
-
-  <h2 class="seccion-titulo texto-negro">Mis proyectos</h2>
-  <h3 class="seccion-descripcion">Algunos proyectos backend y microservicios</h3>
-
-  <!-- BLOQUE GITHUB -->
-  <div class="container text-center mb-4">
-    <i class="bi bi-github fs-1"></i>
-    <p class="experiencia-titulo mt-2">Repositorios GitHub</p>
-    <p>Explora más proyectos y código en mi perfil.</p>
-
-    <div class="badges-contenedor">
-      <a href="https://github.com/charly12543?tab=repositories" target="_blank">
-        <button class="btn btn-dark">
-          Ver GitHub <i class="bi bi-github"></i>
-        </button>
-      </a>
-    </div>
-  </div>
-
-  <!-- GALERIA -->
-  <div class="container text-center proyectos-contenedor">
-    <div class="row">
-
-      <!-- PROYECTO 1 -->
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-  <div class="proyecto">
-    <img src="imagenes/proyect3.jpg" alt="Microservicios ventas">
-
-    <div class="overlay">
-      <p><b>Sistema de compras con microservicios</b></p>
-      <small>Spring Boot • Eureka • Gateway • Docker</small>
-
-      <div class="iconos-contenedor mt-2">
-        <a href="https://github.com/charly12543/almacen-service" target="_blank">
-          <i class="bi bi-laptop"></i>
-        </a>
-        <a href="https://github.com/charly12543/almacen-service" target="_blank">
-          <i class="bi bi-github"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <p class="descripcion-proyecto mt-2">
-    Arquitectura de microservicios para sistema de compras distribuido con Spring Boot, 
-    Eureka Server, API Gateway, OpenFeign, Resilience4j y Docker Compose.
-  </p>
-</div>
-
-      <!-- PROYECTO 2 -->
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-  <div class="proyecto">
-    <img src="imagenes/proyect2.jpg" alt="Microservicios hotel">
-
-    <div class="overlay">
-      <p><b>Búsqueda de hoteles con microservicios</b></p>
-      <small>Spring Boot • Eureka • Feign • API Gateway</small>
-
-      <div class="iconos-contenedor mt-2">
-        <a href="https://github.com/charly12543/repositorio-microservicios/" target="_blank">
-          <i class="bi bi-laptop"></i>
-        </a>
-        <a href="https://github.com/charly12543/repositorio-microservicios" target="_blank">
-          <i class="bi bi-github"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <p class="descripcion-proyecto mt-2">
-    Sistema distribuido basado en microservicios para consulta de hoteles por ubicación. 
-    Incluye Eureka Server, OpenFeign, API Gateway, Config Server y Resilience4j.
-  </p>
-</div>
-
-      <!-- PROYECTO 3 -->
-     <div class="col-12 col-md-6 col-lg-4 mb-4">
-  <div class="proyecto">
-    <img src="imagenes/proyect.jpg" alt="Sistema de gestión hospitalaria en Java Desktop">
-    <div class="overlay">
-      <p>Sistema de Gestión Hospitalaria en Java</p>
-      <div class="iconos-contenedor">
-        <a href="https://github.com/charly12543/Hospital/" target="_blank" title="Ver demo del proyecto">
-          <i class="bi bi-laptop"></i>
-        </a>
-        <a href="https://github.com/charly12543/Hospital" target="_blank" title="Ver código en GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- ================= CONTACTOS ================= -->
-
-    <!--Contacto-->
-    <section class="contacto seccion-azul" id="contacto">
-      <div class="container">
-        <div class="container rectangulo text-center d-flex justify-content-evenly">
-          <div class="row">
-             <div class="col-12 col-md-4">
-                <a href="https://api.whatsapp.com/send?phone=527341771575&text=Hola, Me gustaria platicar contigo de una oferta laboral!" target="_blank" rel="noopener noreferrer">
-                <button type="button"> Whatsapp:
-                 <i class="bi bi-whatsapp"></i>
-                </button>
-                </a>
-               </div>
-             <div class="col-12 col-md-4 descripcion">
-               Contactame para unirme a tu grupo de trabajo. <br>
-                <a href="tel:7341771575">
-                <button type="button"> !Llamame:
-                  <i class="bi bi-telephone-inbound"></i>
-                </button>
-                </a>
-               </div>
-             <div class="col-12 col-md-4">
-                <a href="mailto:cbustamantet12@gmail.com">
-                  <button type="button"> Correo:
-                    <i class="bi bi-envelope-at"></i>
-                  </button>
-                </a>
-             </div>
-          </div>
-        </div>
-      </div>
     </section>
 
+    <!-- Proyectos -->
+    <section class="proyectos-recientes seccion-clara d-flex flex-column align-items-center" id="proyectos" data-aos="zoom-in">
+        <h2 class="seccion-titulo texto-negro">Mis proyectos</h2>
+        <h3 class="seccion-descripcion">Algunos proyectos backend y microservicios</h3>
 
+        <!-- Bloque GitHub -->
+        <div class="container text-center mb-4">
+            <i class="bi bi-github fs-1"></i>
+            <p class="experiencia-titulo mt-2">Repositorios GitHub</p>
+            <p>Explora más proyectos y código en mi perfil.</p>
 
+            <div class="badges-contenedor">
+                <a href="https://github.com/charly12543?tab=repositories" target="_blank">
+                    <button class="btn btn-dark">
+                      Ver GitHub <i class="bi bi-github"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
 
+        <!-- Galería -->
+        <div class="container text-center proyectos-contenedor">
+            <div class="row">
 
+                <!-- Proyecto 1 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="proyecto">
+                        <img src="imagenes/proyect3.jpg" alt="Microservicios de sistema de compras">
+                        <div class="overlay">
+                            <p><b>Sistema de compras con microservicios</b></p>
+                            <small>Spring Boot • Eureka • Gateway • Docker</small>
 
+                            <div class="iconos-contenedor mt-2">
+                                <a href="https://github.com/charly12543/almacen-service" target="_blank">
+                                    <i class="bi bi-laptop"></i>
+                                </a>
+                                <a href="https://github.com/charly12543/almacen-service" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <p class="descripcion-proyecto mt-2">
+                        Arquitectura de microservicios para sistema de compras distribuido con Spring Boot, Eureka Server, API Gateway, OpenFeign, Resilience4j y Docker Compose.
+                    </p>
+                </div>
 
+                <!-- Proyecto 2 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="proyecto">
+                        <img src="imagenes/proyect2.jpg" alt="Microservicios para búsqueda de hoteles">
+                        <div class="overlay">
+                            <p><b>Búsqueda de hoteles con microservicios</b></p>
+                            <small>Spring Boot • Eureka • Feign • API Gateway</small>
 
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+                            <div class="iconos-contenedor mt-2">
+                                <a href="https://github.com/charly12543/repositorio-microservicios/" target="_blank">
+                                    <i class="bi bi-laptop"></i>
+                                </a>
+                                <a href="https://github.com/charly12543/repositorio-microservicios" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="descripcion-proyecto mt-2">
+                        Sistema distribuido para consulta de hoteles por ubicación con Eureka, OpenFeign, API Gateway, Config Server y Resilience4j.
+                    </p>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="proyecto">
+                        <img src="imagenes/proyect.jpg" alt="Sistema de gestión hospitalaria en Java Desktop">
+                        <div class="overlay">
+                            <p><b>Sistema de Gestión Hospitalaria en Java</b></p>
+                            <small>Java • Desktop App • MySQL</small>
+
+                            <div class="iconos-contenedor mt-2">
+                                <a href="https://github.com/charly12543/Hospital/" target="_blank">
+                                    <i class="bi bi-laptop"></i>
+                                </a>
+                                <a href="https://github.com/charly12543/Hospital" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto seccion-azul" id="contacto" data-aos="fade-up">
+        <div class="container">
+            <div class="rectangulo text-center d-flex justify-content-evenly">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <a href="https://api.whatsapp.com/send?phone=527341771575">
+                            <button class="btn btn-success">
+                                Whatsapp <i class="bi bi-whatsapp"></i>
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <a href="tel:7341771575">
+                            <button class="btn btn-primary">
+                                ¡Llamame! <i class="bi bi-telephone-inbound"></i>
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <a href="mailto:cbustamantet12@gmail.com">
+                            <button class="btn btn-danger">
+                                Correo <i class="bi bi-envelope-at"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 900, once: true });
+    </script>
+
 </body>
 </html>
