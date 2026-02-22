@@ -391,3 +391,28 @@ body.dark-mode .btn-outline-dark{
   transform: translateX(-50%);
   top: 30px;
 }
+
+/* ================= APPLE GLASS UI ================= */
+
+/* Tarjetas premium */
+.glass-card{
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transition: all 0.35s ease;
+}
+
+/* Hover Apple */
+.glass-card:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+/* Dark mode compatible */
+.dark-mode .glass-card{
+  background: rgba(30, 30, 30, 0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+}
