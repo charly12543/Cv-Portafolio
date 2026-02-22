@@ -1,41 +1,53 @@
 /* =====================================================
-MODERN PORTFOLIO CSS (Apple / iOS Style)
-Dark mode premium + glass UI + smooth animations
+PORTFOLIO PRO CSS — Recruiter Ready Edition
+Apple Style + Dark Mode Premium + Smooth UX
 ===================================================== */
 
 /* ================= ROOT TOKENS ================= */
 :root{
---bg-light: #f5f7fa;
---bg-white: #ffffff;
---text-dark: #111;
---text-soft: #666;
---accent: #0d6efd;
+  --bg-light: #f5f7fa;
+  --bg-white: #ffffff;
+  --text-dark: #0f172a;
+  --text-soft: #64748b;
+  --accent: #2563eb;
 }
 
+/* ================= BASE ================= */
 body{
-font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%);
-color: var(--text-dark);
-transition: background .4s ease, color .4s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%);
+  color: var(--text-dark);
+  transition: background .4s ease, color .4s ease;
 }
 
 html{ scroll-behavior: smooth; }
 
+/* White space premium */
+section{
+  padding: 80px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition: transform .25s ease;
+}
+section:hover{ transform: translateY(-2px); }
+
 /* ================= NAVBAR ================= */
 .navbar{
-padding: 4px;
-background: rgba(255,255,255,0.75);
-backdrop-filter: blur(10px);
-border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 6px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .navbar-brand img{
-height: 65px;
-margin-left: 60px;
+  height: 65px;
+  margin-left: 60px;
 }
 
 .navbar-collapse{
-margin-right: 60px;
+  margin-right: 60px;
 }
 
 /* ================= HERO ================= */
@@ -43,161 +55,178 @@ margin-right: 60px;
 .hero-principal{ padding: 3rem; }
 
 .hero-foto-perfil{
-height: 190px;
-width: 175px;
-border-radius: 50%;
-margin: 20px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  height: 190px;
+  width: 175px;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.hero-subtitle{
+  font-weight: 400;
+  color: var(--text-soft);
+  max-width: 700px;
+  margin: auto;
 }
 
 .hero .btn{
-border-radius: 30px;
-transition: all .35s ease;
+  border-radius: 30px;
+  transition: all .35s ease;
 }
-
 .hero .btn:hover{
-transform: translateY(-4px) scale(1.05);
-box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* ================= SECTIONS ================= */
-section{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-transition: transform .25s ease;
-}
-
-section:hover{ transform: translateY(-2px); }
-
-.seccion-clara{
-background: #ffffff;
-color: #111;
-}
-
+/* ================= TITLES ================= */
 .seccion-titulo{
-font-size: 2rem;
-padding: 15px 0;
-font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
-.seccion-texto{ font-size: 1.15rem; line-height: 1.6; }
+.seccion-texto{
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: auto;
+  color: var(--text-soft);
+}
 
 /* ================= SOBRE MI ================= */
-.sobre-mi{ padding: 80px 20px; }
+.sobre-mi{
+  background: #ffffff;
+  border-radius: 20px;
+}
 
 /* ================= EXPERIENCIA ================= */
-.experiencia{ padding: 40px; }
-
 .experiencia .columna{
-padding: 20px;
-border-radius: 16px;
-border: 1px solid rgba(0,0,0,0.08);
-transition: all .3s ease;
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: all .3s ease;
 }
 
 .experiencia .columna:hover{
-transform: translateY(-6px);
-background: linear-gradient(135deg, #0d6efd, #4da3ff);
-color: white;
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #2563eb, #4f8cff);
+  color: white;
 }
 
 /* ================= PROYECTOS ================= */
 .proyecto{
-position: relative;
-overflow: hidden;
-border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
 }
 
 .proyectos-recientes img{
-width: 100%;
-border-radius: 16px;
-transition: .35s ease;
+  width: 100%;
+  border-radius: 18px;
+  transition: .35s ease;
 }
 
 .overlay{
-position: absolute;
-inset: 0;
-opacity: 0;
-background: rgba(0,0,0,.65);
-color: white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-transition: .35s ease;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: rgba(0,0,0,.65);
+  color: white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition: .35s ease;
 }
 
-.proyecto:hover img{ transform: scale(1.05); opacity:.4; }
+.proyecto:hover img{ transform: scale(1.05); opacity:.35; }
 .proyecto:hover .overlay{ opacity:1; }
 
 /* ================= TIMELINE ================= */
 .timeline-content{
-background: #fff;
-padding: 20px;
-border-radius: 14px;
-box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-transition: .3s ease;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: .3s ease;
 }
-
-.timeline-content:hover{ transform: translateY(-6px); }
+.timeline-content:hover{
+  transform: translateY(-6px);
+}
 
 /* ================= GLASS UI ================= */
 .glass-card{
-background: rgba(255,255,255,.6);
-backdrop-filter: blur(14px);
-border-radius: 20px;
-border: 1px solid rgba(255,255,255,.4);
-box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-transition: .35s ease;
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.4);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+  transition: .35s ease;
 }
 
 .glass-card:hover{
-transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* ================= IMPACTO (recruiter section) ================= */
+.impacto-grid{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+  text-align:center;
+}
+
+.impacto-grid h3{
+  font-size:2rem;
+  color: var(--accent);
 }
 
 /* =====================================================
-🌙 DARK MODE — iOS STYLE
+🌙 DARK MODE — iOS PREMIUM
 ===================================================== */
 body.dark-mode{
-background: radial-gradient(circle at top, #1c1c1c 0%, #0f0f0f 100%);
-color: #e4e4e4;
+  background: radial-gradient(circle at top, #1c1c1c 0%, #0f0f0f 100%);
+  color: #e4e4e4;
 }
 
 /* Navbar dark */
 body.dark-mode .navbar{
-background: rgba(20,20,20,.8);
-border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: rgba(18,18,18,.85);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 /* Sections */
-body.dark-mode .seccion-clara{
-background: #181818;
-color: #e4e4e4;
+body.dark-mode section{
+  background: transparent;
 }
 
-body.dark-mode .sobre-mi{ background: #161616; }
+body.dark-mode .seccion-texto{
+  color:#cbd5f5;
+}
 
-body.dark-mode .seccion-texto{ color:#d6d6d6; }
+/* SOBRE MI FIX (tu problema principal) */
+body.dark-mode .sobre-mi{
+  background: linear-gradient(145deg, #1f1f1f, #141414);
+  border: 1px solid rgba(255,255,255,0.05);
+}
 
 /* Glass dark premium */
 body.dark-mode .glass-card{
-background: rgba(25,25,25,.55);
-backdrop-filter: blur(18px);
-border: 1px solid rgba(255,255,255,0.06);
-box-shadow: 0 15px 50px rgba(0,0,0,.7);
+  background: rgba(25,25,25,.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 60px rgba(0,0,0,.7);
 }
 
 /* Timeline dark */
 body.dark-mode .timeline-content{
-background:#1f1f1f;
-color:#e4e4e4;
+  background:#1f1f1f;
+  color:#e4e4e4;
 }
 
 /* Experience cards */
 body.dark-mode .experiencia .columna{
-border-color:#333;
+  border-color:#333;
 }
 
 /* Overlay darker */
@@ -208,26 +237,41 @@ body.dark-mode .seccion-azul{ background:#1a237e; }
 
 /* Buttons */
 body.dark-mode .btn-outline-dark{
-color:white;
-border-color:white;
+  color:white;
+  border-color:white;
 }
 
 /* ================= TOGGLE ANIMATION ================= */
 #darkModeToggle{
-border-radius: 50px;
-transition: transform .25s ease, box-shadow .25s ease;
+  border-radius: 50px;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 #darkModeToggle:hover{
-transform: scale(1.15) rotate(8deg);
-box-shadow: 0 5px 20px rgba(0,0,0,.3);
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+/* ================= ANIMACIONES SUAVES ================= */
+.fade-up{
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp .8s ease forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:767px){
-.navbar-brand{ display:none; }
+  .navbar-brand{ display:none; }
+  .impacto-grid{ flex-direction:column; }
 }
 
 /* =====================================================
-END — Modern Apple Portfolio CSS
+END — Portfolio PRO Recruiter Edition
 ===================================================== */
