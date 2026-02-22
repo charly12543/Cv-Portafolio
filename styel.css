@@ -241,16 +241,26 @@ body.dark-mode .btn-outline-dark{
   border-color:white;
 }
 
-/* ================= TOGGLE ANIMATION ================= */
-#darkModeToggle{
-  border-radius: 50px;
-  transition: transform .25s ease, box-shadow .25s ease;
+/* ============================= */
+/* DARK MODE TOGGLE PRO */
+/* ============================= */
+
+#darkModeToggle {
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #f1f5f9;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
 }
 
-#darkModeToggle:hover{
-  transform: scale(1.15) rotate(8deg);
-  box-shadow: 0 5px 20px rgba(0,0,0,.3);
+#darkModeToggle:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(96,165,250,0.4);
 }
+
 
 /* ================= ANIMACIONES SUAVES ================= */
 .fade-up{
@@ -327,6 +337,98 @@ body.dark-mode .btn-outline-dark{
 .btn-danger:hover {
   background: #475569 !important;
   transform: translateY(-2px);
+}
+
+/* ============================= */
+/* NAVBAR FAANG STYLE */
+/* ============================= */
+
+.navbar-custom {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(14px);
+  background: rgba(15, 23, 42, 0.65);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Logo */
+.navbar-brand img {
+  height: 42px;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.4));
+}
+
+/* Links */
+.navbar-custom .nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  margin: 0 6px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Hover glow */
+.navbar-custom .nav-link:hover {
+  color: #60a5fa !important;
+  text-shadow: 0 0 12px rgba(96,165,250,0.6);
+}
+
+/* Underline animada tipo Stripe */
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg,#60a5fa,#22d3ee);
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ============================= */
+/* LIGHT MODE FIX */
+/* ============================= */
+
+body:not(.dark-mode) .navbar-custom {
+  background: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+body:not(.dark-mode) .navbar-custom .nav-link {
+  color: #0f172a !important;
+}
+
+body:not(.dark-mode) #darkModeToggle {
+  background: rgba(0,0,0,0.05);
+  color: #0f172a;
+}
+/* Entrada suave navbar */
+.navbar-custom {
+  animation: fadeDown 0.6s ease;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Glow superior tipo macOS */
+.navbar-custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.08), transparent);
+  pointer-events: none;
 }
 
 /* =====================================================
