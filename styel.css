@@ -332,6 +332,35 @@ section {
   padding-top: 70px;
   padding-bottom: 70px;
 }
+
+/* ================= ANIMACIONES SCROLL PRO ================= */
+
+/* Estado inicial (invisible) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .8s cubic-bezier(.22,.61,.36,1);
+}
+
+/* Cuando aparece */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes opcionales */
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal.visible.reveal-left,
+.reveal.visible.reveal-right {
+  transform: translateX(0);
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width:767px){
