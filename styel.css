@@ -660,6 +660,16 @@ body.dark-mode .action-btn{
   left:100%;
 }
 
+.proyecto{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.descripcion-proyecto{
+  min-height: 70px;
+}
+
 /* =====================================================
 END — Portfolio PRO Recruiter Edition
 ===================================================== */
