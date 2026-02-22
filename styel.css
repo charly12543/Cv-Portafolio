@@ -96,9 +96,14 @@ h1{
 .hero .btn{
     transition: all 0.3s ease;
 }
+.hero .btn{
+  border-radius: 30px;
+  transition: all 0.35s ease;
+}
+
 .hero .btn:hover{
-    transform: translateY(-4px);
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* ================= SOBRE MI ================= */
@@ -415,4 +420,21 @@ body.dark-mode .btn-outline-dark{
 .dark-mode .glass-card{
   background: rgba(30, 30, 30, 0.6);
   border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Sombras modernas */
+section{
+  transition: all 0.3s ease;
+}
+
+section:hover{
+  transform: translateY(-2px);
+}
+
+body{
+  background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 100%);
+}
+
+.dark-mode body{
+  background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
 }
