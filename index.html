@@ -327,5 +327,30 @@
       AOS.init({ duration: 900, once: true });
     </script>
 
+                <script>
+  AOS.init({ duration: 900, once: true });
+</script>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+const toggle = document.getElementById("darkModeToggle");
+
+// Cargar preferencia guardada
+if(localStorage.getItem("darkMode") === "true"){
+  document.body.classList.add("dark-mode");
+  toggle.textContent = "☀️";
+}
+
+// Toggle click
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  const enabled = document.body.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", enabled);
+
+  toggle.textContent = enabled ? "☀️" : "🌙";
+});
+</script>              
+
 </body>
 </html>
