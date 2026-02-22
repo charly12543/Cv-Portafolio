@@ -281,6 +281,57 @@ h1{
     }
 }
 
+/* ================= DARK MODE ================= */
+body.dark-mode{
+    background-color: #121212;
+    color: #e4e4e4;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Secciones */
+body.dark-mode .seccion-clara{
+    background-color: #1e1e1e;
+    color: #e4e4e4;
+}
+
+body.dark-mode .seccion-oscura{
+    background-color: #181818;
+}
+
+/* Navbar */
+body.dark-mode .navbar{
+    background-color: #1b1b1b !important;
+}
+
+/* Cards experiencia */
+body.dark-mode .experiencia .columna{
+    border-color: #444;
+}
+
+/* Overlay proyectos */
+body.dark-mode .overlay{
+    background: rgba(0,0,0,0.8);
+}
+
+/* Contacto */
+body.dark-mode .seccion-azul{
+    background-color: #1a237e;
+}
+
+/* Botones */
+body.dark-mode .btn-outline-dark{
+    color: white;
+    border-color: white;
+}
+
+/* Toggle botón animación */
+#darkModeToggle{
+    transition: all 0.3s ease;
+}
+#darkModeToggle:hover{
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 400px){
     .overlay p{ font-size: 16px; }
     .overlay i{ font-size: 32px; }
