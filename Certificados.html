@@ -2,89 +2,153 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificados</title>
-    <!--CSS--> 
+    <title>Certificados | Carlos Bustamante</title>
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox.css">
-    <link rel="stylesheet" href="styel.css">
-   
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts opcional -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!--Barra de navegacion-->
-    <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbar-toggler">
-            <a class="navbar-brand" href="#">
-                <img  src="imagenes/logo-tecno.jpg"   alt="logo-tecno">
-            </a>
-            <ul class="navbar-nav d-flex justify-content-center align-items-center">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="index.html">Regresar al Inicio del CV</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
-   
-    <h2>Certificados </h2>
-
-    <div class="container">
-
-        <div class="gallery">
-            
-            <a href="images/seguridad.png" data-lightbox="models" data.tite="seguridad">
-                <img src="images/seguridad.png" alt="seguridad">
-            </a>
-
-            <a href="imagenes/Micros-certificado.png" data-lightbox="models" data.tite="microServicios">
-                <img src="imagenes/Micros-certificado.png" alt="microServicios">
-            </a>
-
-            <a href="images/Certificado-Spring.png" data-lightbox="models" data.tite="springboot">
-                <img src="images/Certificado-Spring.png" alt="springboot">
-            </a>
-
-            <a href="images/certificadoBD.png" data-lightbox="models" data.tite="certificadoBD">
-                <img src="images/certificadoBD.png" alt="certificadoBD">
-            </a>
-
-            <a href="images/certificadoGit.png" data-lightbox="models" data.tite="certificadoGit">
-                <img src="images/certificadoGit.png" alt="certificadoGit">
-            </a>
-            
-            <a href="images/javaBasico.png" data-lightbox="models" data.tite="javaBasico">
-                <img src="images/javaBasico.png" alt="javaBasico">
-            </a>         
-
-            <a href="imagenes/fotoTitulo.jpg" data-lightbox="models" data.tite="titulo">
-                <img src="imagenes/fotoTitulo.jpg" alt="titulo">
-            </a> 
-
-            <a href="images/certificadoEFSET-ingles.png" data-lightbox="models" data.tite="EfSET">
-                <img src="images/certificadoEFSET-ingles.png" alt="EfSET">
-            </a>             
-                           
-                                          
-            <a href="images/certificadoCENNI.jpg" data-lightbox="models" data.tite="certificadoCENNI">
-                <img src="images/certificadoCENNI.jpg" alt="certificadoCENNI">
-            </a>
-                                    
-                                    
-            
-       
-
-        </div>
+<!-- Navbar igual al index -->
+<nav class="navbar navbar-expand-md navbar-custom">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-toggler">
+      <a class="navbar-brand" href="index.html">
+        <img src="imagenes/logo-tecno.jpg" alt="logo-tecno">
+      </a>
+      <ul class="navbar-nav justify-content-center align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Regresar al Inicio del CV</a></li>
+        <li class="nav-item">
+          <button id="darkModeToggle" class="btn btn-sm btn-outline-dark ms-3">🌙</button>
+        </li>
+      </ul>
     </div>
-    <script src="lightbox-plus-jquery.min.js" ></script>
+  </div>
+</nav>
+
+<!-- Título sección -->
+<section class="text-center reveal">
+  <h2 class="seccion-titulo mt-5">📜 Certificados</h2>
+  <p class="seccion-texto mb-4">Aquí están algunos de mis certificados relevantes</p>
+
+  <div class="container">
+    <div class="impacto-grid">
+
+      <!-- Certificados con lightbox -->
+      <div class="impacto-card reveal">
+        <a href="images/seguridad.png" data-lightbox="certificados" data-title="Seguridad">
+          <img src="images/seguridad.png" alt="Seguridad">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="imagenes/Micros-certificado.png" data-lightbox="certificados" data-title="Microservicios">
+          <img src="imagenes/Micros-certificado.png" alt="Microservicios">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="images/Certificado-Spring.png" data-lightbox="certificados" data-title="Spring Boot">
+          <img src="images/Certificado-Spring.png" alt="Spring Boot">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="images/certificadoBD.png" data-lightbox="certificados" data-title="Base de Datos">
+          <img src="images/certificadoBD.png" alt="Base de Datos">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="images/certificadoGit.png" data-lightbox="certificados" data-title="Git">
+          <img src="images/certificadoGit.png" alt="Git">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="images/javaBasico.png" data-lightbox="certificados" data-title="Java Básico">
+          <img src="images/javaBasico.png" alt="Java Básico">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="imagenes/fotoTitulo.jpg" data-lightbox="certificados" data-title="Título">
+          <img src="imagenes/fotoTitulo.jpg" alt="Título">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="images/certificadoEFSET-ingles.png" data-lightbox="certificados" data-title="EF SET Inglés">
+          <img src="images/certificadoEFSET-ingles.png" alt="EF SET Inglés">
+        </a>
+      </div>
+
+      <div class="impacto-card reveal">
+        <a href="images/certificadoCENNI.jpg" data-lightbox="certificados" data-title="CENNI">
+          <img src="images/certificadoCENNI.jpg" alt="CENNI">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lightbox-plus-jquery.min.js"></script>
+
+<!-- Reveal Animations -->
+<script>
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- Dark Mode -->
+<script>
+const toggle = document.getElementById("darkModeToggle");
+const saved = localStorage.getItem("darkMode");
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(saved === "true" || (saved === null && prefersDark)){
+  document.body.classList.add("dark-mode");
+  toggle.textContent = "☀️";
+} else {
+  toggle.textContent = "🌙";
+}
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  const enabled = document.body.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", enabled);
+  toggle.textContent = enabled ? "☀️" : "🌙";
+});
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if(localStorage.getItem("darkMode") === null){
+    document.body.classList.toggle("dark-mode", e.matches);
+    toggle.textContent = e.matches ? "☀️" : "🌙";
+  }
+});
+</script>
+
 </body>
 </html>
