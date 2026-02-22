@@ -532,6 +532,108 @@ body.dark-mode .btn-glass{
   color: #eaeaea;
 }
 
+/* ============================= */
+/* CONTACTO ULTRA CLEAN */
+/* ============================= */
+
+.contacto-ultra{
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+}
+
+.contacto-container{
+  text-align: center;
+  max-width: 700px;
+}
+
+.contacto-title{
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.contacto-sub{
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* BOTONES */
+.contacto-actions{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-btn{
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  color: white;
+}
+
+/* Hover elegante */
+.action-btn:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Colores personalizados */
+.whatsapp:hover{
+  background:#25D366;
+}
+.phone:hover{
+  background:#0d6efd;
+}
+.mail:hover{
+  background:#ff4d4d;
+}
+
+/* DARK MODE */
+body.dark-mode .contacto-ultra{
+  background: linear-gradient(180deg,#0f172a,#020617);
+}
+
+body.dark-mode .contacto-title{
+  color:#f1f5f9;
+}
+
+body.dark-mode .contacto-sub{
+  color:#94a3b8;
+}
+
+body.dark-mode .action-btn{
+  background:#1e293b;
+}
+
+.contacto-actions a{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpContact .6s ease forwards;
+}
+
+.contacto-actions a:nth-child(1){ animation-delay: .1s; }
+.contacto-actions a:nth-child(2){ animation-delay: .2s; }
+.contacto-actions a:nth-child(3){ animation-delay: .3s; }
+
+@keyframes fadeUpContact{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
 /* =====================================================
 END — Portfolio PRO Recruiter Edition
 ===================================================== */
