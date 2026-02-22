@@ -1,9 +1,8 @@
 /* =====================================================
-PORTFOLIO PRO CSS — Recruiter Ready Edition
-Apple Style + Dark Mode Premium + Smooth UX
+PORTFOLIO PRO CSS — Clean Recruiter Edition
 ===================================================== */
 
-/* ================= ROOT TOKENS ================= */
+/* ================= ROOT ================= */
 :root{
   --bg-light: #f5f7fa;
   --bg-white: #ffffff;
@@ -22,587 +21,247 @@ body{
 
 html{ scroll-behavior: smooth; }
 
-/* White space premium */
 section{
   padding: 80px 20px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  transition: transform .25s ease;
 }
-section:hover{ transform: translateY(-2px); }
 
 /* ================= NAVBAR ================= */
-.navbar{
-  padding: 6px;
+.navbar-custom{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(14px);
   background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  animation: fadeDown .6s ease;
 }
 
 .navbar-brand img{
-  height: 65px;
-  margin-left: 60px;
+  height: 42px;
 }
 
-.navbar-collapse{
-  margin-right: 60px;
+.navbar-custom .nav-link{
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  margin: 0 6px;
+  position: relative;
+  transition: .25s ease;
+}
+
+.navbar-custom .nav-link:hover{
+  color: var(--accent) !important;
+}
+
+.navbar-custom .nav-link::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0%;
+  height:2px;
+  background:linear-gradient(90deg,#60a5fa,#22d3ee);
+  transition:.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after{
+  width:100%;
+}
+
+@keyframes fadeDown{
+  from{ opacity:0; transform:translateY(-12px); }
+  to{ opacity:1; transform:translateY(0); }
 }
 
 /* ================= HERO ================= */
-.hero{ min-height: 520px; text-align: center; margin-bottom: 50px; }
-.hero-principal{ padding: 3rem; }
+.hero{ text-align:center; min-height:520px; }
 
 .hero-foto-perfil{
-  height: 190px;
-  width: 175px;
-  border-radius: 50%;
-  margin: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  height:190px;
+  width:175px;
+  border-radius:50%;
+  margin:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
 .hero-subtitle{
-  font-weight: 400;
-  color: var(--text-soft);
-  max-width: 700px;
-  margin: auto;
-}
-
-.hero .btn{
-  border-radius: 30px;
-  transition: all .35s ease;
-}
-.hero .btn:hover{
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  color:var(--text-soft);
+  max-width:700px;
+  margin:auto;
 }
 
 /* ================= TITLES ================= */
 .seccion-titulo{
-  font-size: 2.2rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+  font-size:2.2rem;
+  font-weight:600;
 }
 
 .seccion-texto{
-  font-size: 1.15rem;
-  line-height: 1.7;
-  max-width: 720px;
-  margin: auto;
-  color: var(--text-soft);
-}
-
-/* ================= SOBRE MI ================= */
-.sobre-mi{
-  background: #ffffff;
-  border-radius: 20px;
+  max-width:720px;
+  margin:auto;
+  color:var(--text-soft);
+  line-height:1.7;
 }
 
 /* ================= EXPERIENCIA ================= */
 .experiencia .columna{
-  padding: 24px;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,0.08);
-  transition: all .3s ease;
+  padding:24px;
+  border-radius:18px;
+  border:1px solid rgba(0,0,0,.08);
+  transition:.3s ease;
 }
 
 .experiencia .columna:hover{
-  transform: translateY(-8px);
-  background: linear-gradient(135deg, #2563eb, #4f8cff);
-  color: white;
+  transform:translateY(-8px);
+  background:linear-gradient(135deg,#2563eb,#4f8cff);
+  color:white;
 }
 
 /* ================= PROYECTOS ================= */
 .proyecto{
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
-.proyectos-recientes img{
-  width: 100%;
-  border-radius: 18px;
-  transition: .35s ease;
+.proyecto img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:18px;
+  transition:.35s ease;
 }
 
 .overlay{
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  background: rgba(0,0,0,.65);
-  color: white;
+  position:absolute;
+  inset:0;
+  opacity:0;
+  background:rgba(0,0,0,.65);
+  color:white;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  transition: .35s ease;
+  transition:.35s ease;
 }
 
-.proyecto:hover img{ transform: scale(1.05); opacity:.35; }
+.proyecto:hover img{ transform:scale(1.05); opacity:.35; }
 .proyecto:hover .overlay{ opacity:1; }
 
-/* ================= TIMELINE ================= */
-.timeline-content{
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: .3s ease;
-}
-.timeline-content:hover{
-  transform: translateY(-6px);
+.descripcion-proyecto{
+  margin-top:12px;
+  margin-bottom:30px;
+  line-height:1.5;
+  min-height:70px;
 }
 
-/* ================= GLASS UI ================= */
-.glass-card{
-  background: rgba(255,255,255,.55);
-  backdrop-filter: blur(18px);
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,.4);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
-  transition: .35s ease;
+.proyectos-contenedor{
+  margin-bottom:80px;
 }
 
-.glass-card:hover{
-  transform: translateY(-8px) scale(1.02);
-}
+/* ================= CONTACTO FINAL ================= */
 
-/* ================= IMPACTO (recruiter section) ================= */
-.impacto-grid{
+.contacto-ultra{
+  padding:120px 20px;
   display:flex;
-  gap:40px;
   justify-content:center;
+  align-items:center;
+  background:linear-gradient(180deg,#f8fafc,#ffffff);
+}
+
+.contacto-container{
   text-align:center;
+  max-width:700px;
 }
 
-.impacto-grid h3{
-  font-size:2rem;
-  color: var(--accent);
+.contacto-title{
+  font-size:2.8rem;
+  font-weight:800;
+  letter-spacing:-1.2px;
+  margin-bottom:15px;
 }
 
-/* =====================================================
-🌙 DARK MODE — iOS PREMIUM
-===================================================== */
+.contacto-sub{
+  color:var(--text-soft);
+  font-size:1.1rem;
+  margin-bottom:40px;
+}
+
+.contacto-actions{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.action-btn{
+  padding:14px 28px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s ease;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#111;
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+.action-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+/* Shine */
+.action-btn::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:-100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.3),transparent);
+  transition:.5s;
+}
+
+.action-btn:hover::after{
+  left:100%;
+}
+
+.whatsapp:hover{ background:#25D366; }
+.phone:hover{ background:#0d6efd; }
+.mail:hover{ background:#ff4d4d; }
+
+/* ================= DARK MODE ================= */
+
 body.dark-mode{
-  background: radial-gradient(circle at top, #1c1c1c 0%, #0f0f0f 100%);
-  color: #e4e4e4;
+  background:radial-gradient(circle at top,#1c1c1c 0%,#0f0f0f 100%);
+  color:#e4e4e4;
 }
 
-/* Navbar dark */
-body.dark-mode .navbar{
-  background: rgba(18,18,18,.85);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-/* Sections */
-body.dark-mode section{
-  background: transparent;
+body.dark-mode .navbar-custom{
+  background:rgba(18,18,18,.85);
+  border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 body.dark-mode .seccion-texto{
   color:#cbd5f5;
 }
 
-/* SOBRE MI FIX (tu problema principal) */
-body.dark-mode .sobre-mi{
-  background: linear-gradient(145deg, #1f1f1f, #141414);
-  border: 1px solid rgba(255,255,255,0.05);
+body.dark-mode .overlay{
+  background:rgba(0,0,0,.8);
 }
 
-/* Glass dark premium */
-body.dark-mode .glass-card{
-  background: rgba(25,25,25,.55);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 20px 60px rgba(0,0,0,.7);
-}
-
-/* Timeline dark */
-body.dark-mode .timeline-content{
-  background:#1f1f1f;
-  color:#e4e4e4;
-}
-
-/* Experience cards */
-body.dark-mode .experiencia .columna{
-  border-color:#333;
-}
-
-/* Overlay darker */
-body.dark-mode .overlay{ background: rgba(0,0,0,.8); }
-
-/* Contact */
-body.dark-mode .seccion-azul{ background:#1a237e; }
-
-/* Buttons */
-body.dark-mode .btn-outline-dark{
-  color:white;
-  border-color:white;
-}
-
-/* ============================= */
-/* DARK MODE TOGGLE PRO */
-/* ============================= */
-
-#darkModeToggle {
-  border-radius: 999px;
-  padding: 6px 12px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: #f1f5f9;
-  backdrop-filter: blur(8px);
-  transition: all 0.25s ease;
-}
-
-#darkModeToggle:hover {
-  background: rgba(255,255,255,0.15);
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(96,165,250,0.4);
-}
-
-
-/* ================= ANIMACIONES SUAVES ================= */
-.fade-up{
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp .8s ease forwards;
-}
-
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width:767px){
-  .navbar-brand{ display:none; }
-  .impacto-grid{ flex-direction:column; }
-}
-
-/* ============================= */
-/* CONTACTO MODERNO */
-/* ============================= */
-
-.seccion-azul {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  padding: 60px 0;
-}
-
-.rectangulo {
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(14px);
-  border-radius: 18px;
-  padding: 35px 20px;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* Botones base */
-.rectangulo .btn {
-  width: 100%;
-  font-weight: 600;
-  border-radius: 12px;
-  padding: 12px 18px;
-  border: none;
-  transition: all 0.25s ease;
-}
-
-/* Whatsapp */
-.btn-success {
-  background: #22c55e !important;
-}
-
-.btn-success:hover {
-  background: #16a34a !important;
-  transform: translateY(-2px);
-}
-
-/* Llamar */
-.btn-primary {
-  background: #3b82f6 !important;
-}
-
-.btn-primary:hover {
-  background: #2563eb !important;
-  transform: translateY(-2px);
-}
-
-/* Correo (ANTES rojo feo) */
-.btn-danger {
-  background: #64748b !important;
-}
-
-.btn-danger:hover {
-  background: #475569 !important;
-  transform: translateY(-2px);
-}
-
-/* ============================= */
-/* NAVBAR FAANG STYLE */
-/* ============================= */
-
-.navbar-custom {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(14px);
-  background: rgba(15, 23, 42, 0.65);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  transition: all 0.3s ease;
-}
-
-/* Logo */
-.navbar-brand img {
-  height: 42px;
-  filter: drop-shadow(0 0 6px rgba(0,0,0,0.4));
-}
-
-/* Links */
-.navbar-custom .nav-link {
-  color: #e2e8f0 !important;
-  font-weight: 500;
-  margin: 0 6px;
-  position: relative;
-  transition: all 0.25s ease;
-}
-
-/* Hover glow */
-.navbar-custom .nav-link:hover {
-  color: #60a5fa !important;
-  text-shadow: 0 0 12px rgba(96,165,250,0.6);
-}
-
-/* Underline animada tipo Stripe */
-.navbar-custom .nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg,#60a5fa,#22d3ee);
-  transition: width 0.3s ease;
-}
-
-.navbar-custom .nav-link:hover::after {
-  width: 100%;
-}
-
-/* ============================= */
-/* LIGHT MODE FIX */
-/* ============================= */
-
-body:not(.dark-mode) .navbar-custom {
-  background: rgba(255,255,255,0.75);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-body:not(.dark-mode) .navbar-custom .nav-link {
-  color: #0f172a !important;
-}
-
-body:not(.dark-mode) #darkModeToggle {
-  background: rgba(0,0,0,0.05);
-  color: #0f172a;
-}
-/* Entrada suave navbar */
-.navbar-custom {
-  animation: fadeDown 0.6s ease;
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Glow superior tipo macOS */
-.navbar-custom::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.08), transparent);
-  pointer-events: none;
-}
-
-/* Light mode fix */
-body:not(.dark-mode) .contacto-pro {
-  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
-}
-
-body:not(.dark-mode) .titulo-contacto {
-  color: #0f172a;
-}
-
-body:not(.dark-mode) .sub-contacto {
-  color: #475569;
-}
-
-body:not(.dark-mode) .contacto-card {
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(0,0,0,0.08);
-}
-
-body:not(.dark-mode) .contact-btn {
-  color: #0f172a;
-  background: rgba(0,0,0,0.04);
-}
-
-/* ================= CONTACTO PREMIUM ================= */
-
-.contacto-pro{
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top, #f5f7fa, #ffffff);
-}
-
-.contacto-card{
-  max-width: 700px;
-  text-align: center;
-  padding: 50px 40px;
-  border-radius: 24px;
-}
-
-.contacto-card h2{
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.contacto-card p{
-  color: #666;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-}
-
-/* BOTONES */
-.contacto-botones{
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.btn-glass{
-  padding: 12px 22px;
-  border-radius: 50px;
-  backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.6);
-  border: 1px solid rgba(255,255,255,0.4);
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-  transition: .3s ease;
-}
-
-.btn-glass:hover{
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Colores individuales */
-.whatsapp:hover{ background:#25D366; color:white; }
-.call:hover{ background:#0d6efd; color:white; }
-.mail:hover{ background:#ff4d4d; color:white; }
-
-/* DARK MODE */
-body.dark-mode .contacto-pro{
-  background: radial-gradient(circle at top, #121212, #0d0d0d);
-}
-
-body.dark-mode .contacto-card{
-  background: rgba(25,25,25,0.6);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-body.dark-mode .contacto-card p{
-  color:#cfcfcf;
-}
-
-body.dark-mode .btn-glass{
-  background: rgba(40,40,40,0.6);
-  color: #eaeaea;
-}
-
-/* ============================= */
-/* CONTACTO ULTRA CLEAN */
-/* ============================= */
-
-.contacto-ultra{
-  padding: 120px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(180deg, #f8fafc, #ffffff);
-}
-
-.contacto-container{
-  text-align: center;
-  max-width: 700px;
-}
-
-.contacto-title{
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  letter-spacing: -1px;
-}
-
-.contacto-sub{
-  color: #64748b;
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-}
-
-/* BOTONES */
-.contacto-actions{
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.action-btn{
-  padding: 14px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all .3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #111;
-  color: white;
-}
-
-/* Hover elegante */
-.action-btn:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-/* Colores personalizados */
-.whatsapp:hover{
-  background:#25D366;
-}
-.phone:hover{
-  background:#0d6efd;
-}
-.mail:hover{
-  background:#ff4d4d;
-}
-
-/* DARK MODE */
 body.dark-mode .contacto-ultra{
-  background: linear-gradient(180deg,#0f172a,#020617);
+  background:linear-gradient(180deg,#0f172a,#020617);
 }
 
 body.dark-mode .contacto-title{
@@ -617,66 +276,8 @@ body.dark-mode .action-btn{
   background:#1e293b;
 }
 
-.contacto-actions a{
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUpContact .6s ease forwards;
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:767px){
+  .navbar-brand{ display:none; }
 }
-
-.contacto-actions a:nth-child(1){ animation-delay: .1s; }
-.contacto-actions a:nth-child(2){ animation-delay: .2s; }
-.contacto-actions a:nth-child(3){ animation-delay: .3s; }
-
-@keyframes fadeUpContact{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-.contacto-title{
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: -1.2px;
-}
-
-.action-btn{
-  position: relative;
-  overflow: hidden;
-}
-
-.action-btn::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  top:0;
-  left:-100%;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.3),transparent);
-  transition:.5s;
-}
-
-.action-btn:hover::after{
-  left:100%;
-}
-
-.proyecto img{
-  width: 100%;
-  height: 220px; /* altura uniforme */
-  object-fit: cover; /* recorte inteligente */
-  border-radius: 16px;
-}
-
-.proyecto{
-  display:flex;
-  flex-direction:column;
-  height:100%;
-}
-
-.descripcion-proyecto{
-  min-height: 70px;
-}
-
-/* =====================================================
-END — Portfolio PRO Recruiter Edition
-===================================================== */
