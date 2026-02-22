@@ -14,9 +14,6 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="styel.css">
     
@@ -52,7 +49,7 @@
 
   <!-- Sección Hero -->
 <section class="hero align-items-stretch" id="inicio">
-  <div class="hero-principal glass-card  flex-column justify-content-center align-items-center text-center" class="fade-up"="fade-up">
+      <div class="hero-principal glass-card flex-column justify-content-center align-items-center text-center reveal">
     
     <img class="hero-foto-perfil mb-3" src="imagenes/Carlos.jpg" alt="foto-perfil">
            
@@ -121,7 +118,7 @@
     
 
     <!-- ================= SOBRE MI ================= -->
-<section class="sobre-mi" id="sobre-mi" class="fade-up"="fade-up">
+    <section class="sobre-mi reveal" id="sobre-mi">
   <div class="container text-center">
     <h2 class="seccion-titulo">🧠 Sobre mí</h2>
     <p class="seccion-texto">
@@ -133,7 +130,7 @@
 </section>
 
     <!-- Experiencia / Cursos / Stack -->
-  <section class="experiencia reveal" seccion-clara text-center" class="fade-up"="fade-up">
+      <section class="experiencia seccion-clara text-center reveal">
         <div class="contenedor text-center">
             <div class="row">
 
@@ -390,12 +387,6 @@
     <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- AOS Init -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 900, once: true });
-    </script>
-
 <!-- DARK MODE SCRIPT -->
 <script>
 const toggle = document.getElementById("darkModeToggle");
@@ -424,20 +415,7 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
       entry.target.classList.add("visible");
-    }
-  });
-}, { threshold: 0.15 });
-
-reveals.forEach(el => observer.observe(el));
-</script>
-
-        <script>
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
+      observer.unobserve(entry.target); // performance pro
     }
   });
 }, { threshold: 0.15 });
