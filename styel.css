@@ -431,6 +431,29 @@ body:not(.dark-mode) #darkModeToggle {
   pointer-events: none;
 }
 
+/* Light mode fix */
+body:not(.dark-mode) .contacto-pro {
+  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+}
+
+body:not(.dark-mode) .titulo-contacto {
+  color: #0f172a;
+}
+
+body:not(.dark-mode) .sub-contacto {
+  color: #475569;
+}
+
+body:not(.dark-mode) .contacto-card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+body:not(.dark-mode) .contact-btn {
+  color: #0f172a;
+  background: rgba(0,0,0,0.04);
+}
+
 /* =====================================================
 END — Portfolio PRO Recruiter Edition
 ===================================================== */
