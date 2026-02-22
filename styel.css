@@ -382,6 +382,31 @@ section {
 .delay-1{ transition-delay: .15s; }
 .delay-2{ transition-delay: .3s; }
 .delay-3{ transition-delay: .45s; }
+
+.impacto-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.impacto-card{
+  padding:30px;
+  border-radius:18px;
+  background:white;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  transition:.35s ease;
+}
+
+.impacto-card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 30px 70px rgba(0,0,0,.15);
+}
+
+body.dark-mode .impacto-card{
+  background:#1e293b;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width:767px){
