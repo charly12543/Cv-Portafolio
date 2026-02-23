@@ -1,5 +1,6 @@
 /* =====================================================
-PORTFOLIO PRO CSS — FINAL CLEAN BUILD (SIN DUPLICADOS)
+PORTFOLIO PRO CSS — FINAL MASTER BUILD
+Sin duplicados + consistente
 ===================================================== */
 
 /* ================= ROOT ================= */
@@ -20,7 +21,6 @@ body{
   transition:background .35s ease,color .35s ease;
 }
 
-/* Espaciado uniforme entre secciones */
 section{
   padding:70px 20px;
   display:flex;
@@ -55,9 +55,7 @@ section{
 /* ================= HERO ================= */
 .hero{ text-align:center; min-height:520px; }
 
-.hero-principal{
-  margin-bottom:40px; /* 🔥 más aire */
-}
+.hero-principal{ margin-bottom:40px; }
 
 .hero-foto-perfil{
   height:190px;
@@ -73,22 +71,24 @@ section{
   margin:auto;
 }
 
-/* Imagen inferior */
+/* Imagen inferior uniforme */
 .hero-inferior{
   margin-top:40px;
   text-align:center;
 }
 
 .hero-inferior-imagen{
-  max-width:800px;
+  max-width:620px;
   width:90%;
-  border-radius:20px;
-  box-shadow:0 25px 70px rgba(0,0,0,.15);
-  transition:.35s ease;
+  border-radius:18px;
+  display:block;
+  margin:30px auto;
+  box-shadow:0 25px 60px rgba(0,0,0,.18);
+  transition:transform .5s cubic-bezier(.2,.65,.3,1);
 }
 
 .hero-inferior-imagen:hover{
-  transform:translateY(-6px) scale(1.03);
+  transform:translateY(-6px) scale(1.02);
 }
 
 /* ================= TITLES ================= */
@@ -113,16 +113,60 @@ section{
 }
 
 .impacto-card{
-  padding:28px;
-  border-radius:16px;
   background:white;
+  border-radius:18px;
+  padding:30px;
+  transition:all .45s cubic-bezier(.2,.65,.3,1);
   box-shadow:0 15px 40px rgba(0,0,0,.08);
-  transition:.3s ease;
 }
 
 .impacto-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 25px 60px rgba(0,0,0,.15);
+  transform:translateY(-8px) scale(1.02);
+  background:#f8fafc;
+  box-shadow:0 30px 80px rgba(0,0,0,.18);
+}
+
+/* Certificados imágenes uniformes */
+.impacto-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* ================= EXPERIENCIA CARDS (TUS COLUMNAS) ================= */
+.columna{
+  background:white;
+  border-radius:20px;
+  padding:28px 24px;
+  margin-bottom:25px;
+  height:100%;
+  transition:all .45s cubic-bezier(.2,.65,.3,1);
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+  border:1px solid rgba(0,0,0,.05);
+}
+
+.columna:hover{
+  transform:translateY(-8px) scale(1.02);
+  background:#f8fafc;
+  box-shadow:0 30px 80px rgba(0,0,0,.18);
+}
+
+.columna i{
+  font-size:28px;
+  margin-bottom:10px;
+  color:var(--accent);
+}
+
+.experiencia-titulo{
+  font-weight:600;
+  margin:10px 0 15px;
+}
+
+.columna ul{
+  padding-left:18px;
+  text-align:left;
+  line-height:1.6;
 }
 
 /* ================= PROYECTOS ================= */
@@ -166,7 +210,6 @@ section{
 .timeline-container{
   max-width:900px;
   margin:auto;
-  position:relative;
 }
 
 .timeline-content{
@@ -209,19 +252,6 @@ section{
   transform:translateY(-4px);
 }
 
-/* ================= CERTIFICADOS UNIFORMES ================= */
-.impacto-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
-}
-
-.impacto-card:hover{
-  transform:translateY(-6px) scale(1.02);
-}
-
 /* ================= REVEAL ================= */
 .reveal{
   opacity:0;
@@ -234,18 +264,8 @@ section{
   transform:translateY(0);
 }
 
-.reveal-left{ transform:translateX(-60px); }
-.reveal-right{ transform:translateX(60px); }
-.reveal-up{ transform:translateY(60px); }
-
-.reveal.visible.reveal-left,
-.reveal.visible.reveal-right,
-.reveal.visible.reveal-up{
-  transform:translate(0);
-}
-
 /* =====================================================
-🌙 DARK MODE CLEAN
+🌙 DARK MODE
 ===================================================== */
 
 body.dark-mode{
@@ -253,7 +273,6 @@ body.dark-mode{
   color:#e5e7eb;
 }
 
-/* Navbar */
 body.dark-mode .navbar-custom{
   background:rgba(2,6,23,.85)!important;
   border-bottom:1px solid rgba(148,163,184,.1);
@@ -261,33 +280,35 @@ body.dark-mode .navbar-custom{
 
 body.dark-mode .nav-link{ color:#e5e7eb!important; }
 
-/* Cards */
+/* Cards dark */
 body.dark-mode .impacto-card,
-body.dark-mode .timeline-content{
+body.dark-mode .timeline-content,
+body.dark-mode .columna{
   background:rgba(15,23,42,.75);
   border:1px solid rgba(148,163,184,.15);
   box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
-/* Textos */
+body.dark-mode .impacto-card:hover,
+body.dark-mode .columna:hover{
+  background:rgba(30,41,59,.9);
+  box-shadow:0 25px 70px rgba(0,0,0,.6);
+}
+
+body.dark-mode .columna i{
+  color:#60a5fa;
+}
+
 body.dark-mode .seccion-texto,
 body.dark-mode .hero-subtitle,
 body.dark-mode .contacto-sub{
   color:#94a3b8;
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3{
-  color:#f1f5f9;
-}
-
-/* Overlay */
 body.dark-mode .overlay{
   background:rgba(0,0,0,.8);
 }
 
-/* Botones */
 body.dark-mode .btn-outline-dark{
   border-color:#e5e7eb;
   color:#e5e7eb;
@@ -298,82 +319,12 @@ body.dark-mode .btn-outline-dark:hover{
   color:#020617;
 }
 
-/* Contacto */
 body.dark-mode .contacto-ultra{
   background:#020617;
 }
 
 body.dark-mode .action-btn{
   background:#1e293b;
-}
-
-/* Certificados sombra */
-body.dark-mode .impacto-card img{
-  border:1px solid rgba(255,255,255,.1);
-}
-
-/* ===== HERO IMAGE FIX ===== */
-.hero-inferior-imagen{
-  max-width: 620px;   /* antes gigante */
-  width: 90%;
-  border-radius: 18px;
-  display: block;
-  margin: 30px auto;
-  box-shadow: 0 25px 60px rgba(0,0,0,.18);
-  transition: transform .5s cubic-bezier(.2,.65,.3,1);
-}
-
-.hero-inferior-imagen:hover{
-  transform: translateY(-6px) scale(1.02);
-}
-
-/* ===== IMPACT CARDS RESTORE ===== */
-.impacto-card{
-  background: white;
-  border-radius: 18px;
-  padding: 30px;
-  transition: all .45s cubic-bezier(.2,.65,.3,1);
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-}
-
-.impacto-card:hover{
-  transform: translateY(-8px) scale(1.02);
-  background: #f8fafc;
-  box-shadow: 0 30px 80px rgba(0,0,0,.18);
-}
-
-/* Dark mode */
-body.dark-mode .impacto-card:hover{
-  background: rgba(30,41,59,.8);
-  box-shadow: 0 25px 70px rgba(0,0,0,.5);
-}
-
-/* ===== INFO CARDS (3 COLUMN SECTIONS) ===== */
-.info-card{
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  height: 100%;
-  transition: all .5s cubic-bezier(.2,.65,.3,1);
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-  border: 1px solid rgba(0,0,0,.04);
-}
-
-.info-card:hover{
-  transform: translateY(-8px) scale(1.02);
-  background: #f1f5f9;
-  box-shadow: 0 30px 80px rgba(0,0,0,.18);
-}
-
-/* Dark mode */
-body.dark-mode .info-card{
-  background: rgba(15,23,42,.75);
-  border: 1px solid rgba(148,163,184,.15);
-}
-
-body.dark-mode .info-card:hover{
-  background: rgba(30,41,59,.9);
-  box-shadow: 0 25px 70px rgba(0,0,0,.6);
 }
 
 /* ================= RESPONSIVE ================= */
