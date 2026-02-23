@@ -1,6 +1,6 @@
 /* =====================================================
-PORTFOLIO PRO CSS — FINAL MASTER BUILD
-Sin duplicados + consistente
+PORTFOLIO PRO CSS — ULTRA CLEAN FINAL
+Sin duplicados • Alturas iguales • Animaciones fluidas
 ===================================================== */
 
 /* ================= ROOT ================= */
@@ -11,7 +11,6 @@ Sin duplicados + consistente
   --accent:#2563eb;
 }
 
-/* ================= BASE ================= */
 html{ scroll-behavior:smooth; }
 
 body{
@@ -26,7 +25,6 @@ section{
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
 }
 
 /* ================= NAVBAR ================= */
@@ -39,13 +37,10 @@ section{
   border-bottom:1px solid rgba(0,0,0,.08);
 }
 
-.navbar-brand img{ height:42px; }
-
 .navbar-custom .nav-link{
   color:var(--text-dark)!important;
   font-weight:500;
-  margin:0 6px;
-  transition:.25s ease;
+  transition:.25s;
 }
 
 .navbar-custom .nav-link:hover{
@@ -53,8 +48,6 @@ section{
 }
 
 /* ================= HERO ================= */
-.hero{ text-align:center; min-height:520px; }
-
 .hero-principal{ margin-bottom:40px; }
 
 .hero-foto-perfil{
@@ -65,26 +58,13 @@ section{
   box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.hero-subtitle{
-  color:var(--text-soft);
-  max-width:700px;
-  margin:auto;
-}
-
-/* Imagen inferior uniforme */
-.hero-inferior{
-  margin-top:40px;
-  text-align:center;
-}
-
 .hero-inferior-imagen{
-  max-width:620px;
+  max-width:560px;
   width:90%;
+  margin:25px auto;
   border-radius:18px;
-  display:block;
-  margin:30px auto;
-  box-shadow:0 25px 60px rgba(0,0,0,.18);
-  transition:transform .5s cubic-bezier(.2,.65,.3,1);
+  box-shadow:0 20px 50px rgba(0,0,0,.18);
+  transition:.45s cubic-bezier(.2,.65,.3,1);
 }
 
 .hero-inferior-imagen:hover{
@@ -99,7 +79,6 @@ section{
 
 .seccion-texto{
   max-width:720px;
-  margin:auto;
   color:var(--text-soft);
   line-height:1.7;
 }
@@ -116,38 +95,44 @@ section{
   background:white;
   border-radius:18px;
   padding:30px;
-  transition:all .45s cubic-bezier(.2,.65,.3,1);
+  border:1px solid rgba(0,0,0,.04);
   box-shadow:0 15px 40px rgba(0,0,0,.08);
+  transition:.45s cubic-bezier(.2,.65,.3,1);
 }
 
 .impacto-card:hover{
-  transform:translateY(-8px) scale(1.02);
-  background:#f8fafc;
-  box-shadow:0 30px 80px rgba(0,0,0,.18);
+  transform:translateY(-12px) scale(1.04);
+  background:#f1f5f9;
+  box-shadow:0 35px 90px rgba(0,0,0,.18);
 }
 
-/* Certificados imágenes uniformes */
-.impacto-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:10px;
+/* ================= EXPERIENCIA ================= */
+/* Igualar altura columnas */
+.experiencia .row{
+  display:flex;
+  flex-wrap:wrap;
 }
 
-/* ================= EXPERIENCIA CARDS (TUS COLUMNAS) ================= */
+.experiencia .col-md-4{
+  display:flex;
+}
+
+/* Tarjeta experiencia */
 .columna{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  width:100%;
   background:white;
   border-radius:20px;
-  padding:28px 24px;
-  margin-bottom:25px;
-  height:100%;
-  transition:all .45s cubic-bezier(.2,.65,.3,1);
-  box-shadow:0 15px 40px rgba(0,0,0,.08);
+  padding:26px 22px;
   border:1px solid rgba(0,0,0,.05);
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+  transition:.45s cubic-bezier(.2,.65,.3,1);
 }
 
 .columna:hover{
-  transform:translateY(-8px) scale(1.02);
+  transform:translateY(-10px) scale(1.025);
   background:#f8fafc;
   box-shadow:0 30px 80px rgba(0,0,0,.18);
 }
@@ -164,7 +149,6 @@ section{
 }
 
 .columna ul{
-  padding-left:18px;
   text-align:left;
   line-height:1.6;
 }
@@ -174,9 +158,6 @@ section{
   position:relative;
   overflow:hidden;
   border-radius:18px;
-  display:flex;
-  flex-direction:column;
-  height:100%;
 }
 
 .proyecto img{
@@ -184,7 +165,7 @@ section{
   height:220px;
   object-fit:cover;
   border-radius:18px;
-  transition:.35s ease;
+  transition:.35s;
 }
 
 .overlay{
@@ -192,11 +173,11 @@ section{
   inset:0;
   opacity:0;
   background:rgba(0,0,0,.65);
-  color:white;
   display:flex;
   justify-content:center;
   align-items:center;
-  transition:.35s ease;
+  color:white;
+  transition:.35s;
 }
 
 .proyecto:hover img{
@@ -205,52 +186,6 @@ section{
 }
 
 .proyecto:hover .overlay{ opacity:1; }
-
-/* ================= TIMELINE ================= */
-.timeline-container{
-  max-width:900px;
-  margin:auto;
-}
-
-.timeline-content{
-  padding:20px;
-  border-radius:14px;
-  background:white;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-/* ================= CONTACTO ================= */
-.contacto-ultra{
-  padding:120px 20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(180deg,#f8fafc,#fff);
-}
-
-.contacto-title{
-  font-size:2.6rem;
-  font-weight:800;
-  margin-bottom:15px;
-}
-
-.contacto-sub{
-  color:var(--text-soft);
-  margin-bottom:40px;
-}
-
-.action-btn{
-  padding:14px 28px;
-  border-radius:999px;
-  font-weight:600;
-  background:#111;
-  color:white;
-  transition:.3s ease;
-}
-
-.action-btn:hover{
-  transform:translateY(-4px);
-}
 
 /* ================= REVEAL ================= */
 .reveal{
@@ -264,25 +199,17 @@ section{
   transform:translateY(0);
 }
 
-/* =====================================================
-🌙 DARK MODE
-===================================================== */
-
+/* ================= DARK MODE ================= */
 body.dark-mode{
-  background:radial-gradient(circle at top,#0b1120 0%,#020617 100%);
+  background:radial-gradient(circle at top,#0b1120,#020617);
   color:#e5e7eb;
 }
 
 body.dark-mode .navbar-custom{
   background:rgba(2,6,23,.85)!important;
-  border-bottom:1px solid rgba(148,163,184,.1);
 }
 
-body.dark-mode .nav-link{ color:#e5e7eb!important; }
-
-/* Cards dark */
 body.dark-mode .impacto-card,
-body.dark-mode .timeline-content,
 body.dark-mode .columna{
   background:rgba(15,23,42,.75);
   border:1px solid rgba(148,163,184,.15);
@@ -299,110 +226,7 @@ body.dark-mode .columna i{
   color:#60a5fa;
 }
 
-body.dark-mode .seccion-texto,
-body.dark-mode .hero-subtitle,
-body.dark-mode .contacto-sub{
-  color:#94a3b8;
-}
-
-body.dark-mode .overlay{
-  background:rgba(0,0,0,.8);
-}
-
-body.dark-mode .btn-outline-dark{
-  border-color:#e5e7eb;
-  color:#e5e7eb;
-}
-
-body.dark-mode .btn-outline-dark:hover{
-  background:#e5e7eb;
-  color:#020617;
-}
-
-body.dark-mode .contacto-ultra{
-  background:#020617;
-}
-
-body.dark-mode .action-btn{
-  background:#1e293b;
-}
-
-/* ===== EXPERIENCIA COLUMNAS MISMO TAMAÑO ===== */
-
-.experiencia .row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.columna{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-}
-
-/* fuerza igualdad visual */
-.experiencia .col-md-4{
-  display: flex;
-}
-/* TARJETA BASE */
-.columna{
-  background: white;
-  border-radius: 18px;
-  padding: 28px 24px;
-  margin-bottom: 25px;
-  transition: all .45s cubic-bezier(.2,.65,.3,1);
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-  border: 1px solid rgba(0,0,0,.05);
-}
-
-/* HOVER PRO */
-.columna:hover{
-  transform: translateY(-10px) scale(1.025);
-  background: #f8fafc;
-  box-shadow: 0 30px 80px rgba(0,0,0,.18);
-}
-
-body.dark-mode .columna{
-  background: rgba(15,23,42,.75);
-  border: 1px solid rgba(148,163,184,.15);
-  box-shadow: 0 15px 40px rgba(0,0,0,.35);
-}
-
-body.dark-mode .columna:hover{
-  background: rgba(30,41,59,.9);
-  box-shadow: 0 25px 70px rgba(0,0,0,.6);
-}
-
-/* ===== IMPACTO PROFESIONAL DINÁMICO ===== */
-
-.impacto-card{
-  background: white;
-  border-radius: 18px;
-  padding: 30px;
-  transition: 
-    transform .45s cubic-bezier(.2,.65,.3,1),
-    box-shadow .45s ease,
-    background .3s ease;
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-  border: 1px solid rgba(0,0,0,.04);
-  will-change: transform;
-}
-
-.impacto-card:hover{
-  transform: translateY(-12px) scale(1.04);
-  background: #f1f5f9;
-  box-shadow: 0 35px 90px rgba(0,0,0,.2);
-}
-
-body.dark-mode .impacto-card:hover{
-  background: rgba(30,41,59,.85);
-  box-shadow: 0 30px 80px rgba(0,0,0,.6);
-}
-
-
 /* ================= RESPONSIVE ================= */
 @media (max-width:767px){
   .navbar-brand{ display:none; }
 }
-
