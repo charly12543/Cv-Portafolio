@@ -312,6 +312,70 @@ body.dark-mode .impacto-card img{
   border:1px solid rgba(255,255,255,.1);
 }
 
+/* ===== HERO IMAGE FIX ===== */
+.hero-inferior-imagen{
+  max-width: 620px;   /* antes gigante */
+  width: 90%;
+  border-radius: 18px;
+  display: block;
+  margin: 30px auto;
+  box-shadow: 0 25px 60px rgba(0,0,0,.18);
+  transition: transform .5s cubic-bezier(.2,.65,.3,1);
+}
+
+.hero-inferior-imagen:hover{
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* ===== IMPACT CARDS RESTORE ===== */
+.impacto-card{
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  transition: all .45s cubic-bezier(.2,.65,.3,1);
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.impacto-card:hover{
+  transform: translateY(-8px) scale(1.02);
+  background: #f8fafc;
+  box-shadow: 0 30px 80px rgba(0,0,0,.18);
+}
+
+/* Dark mode */
+body.dark-mode .impacto-card:hover{
+  background: rgba(30,41,59,.8);
+  box-shadow: 0 25px 70px rgba(0,0,0,.5);
+}
+
+/* ===== INFO CARDS (3 COLUMN SECTIONS) ===== */
+.info-card{
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  height: 100%;
+  transition: all .5s cubic-bezier(.2,.65,.3,1);
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.04);
+}
+
+.info-card:hover{
+  transform: translateY(-8px) scale(1.02);
+  background: #f1f5f9;
+  box-shadow: 0 30px 80px rgba(0,0,0,.18);
+}
+
+/* Dark mode */
+body.dark-mode .info-card{
+  background: rgba(15,23,42,.75);
+  border: 1px solid rgba(148,163,184,.15);
+}
+
+body.dark-mode .info-card:hover{
+  background: rgba(30,41,59,.9);
+  box-shadow: 0 25px 70px rgba(0,0,0,.6);
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width:767px){
   .navbar-brand{ display:none; }
