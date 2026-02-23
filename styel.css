@@ -680,6 +680,40 @@ Compatible con tu grid y responsive
   }
 }
 
+/* =====================================================
+✅ PATCH PRODUCCIÓN FINAL — UX/UI + CONTACTO MOVIL + EXPERIENCIA DINÁMICA
+===================================================== */
+
+/* ===== Experiencia / Cursos / Stack — Altura uniforme (base para JS) ===== */
+.experiencia .col-md-4{
+  display:flex;
+  flex-direction:column;
+}
+
+.experiencia .columna{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  min-height:auto; /* JS se encargará de ajustar altura */
+  transition:all .35s ease;
+}
+
+/* ===== Contacto móvil — botones no se encimen ===== */
+@media (max-width:767px){
+  .contacto-actions{
+    flex-direction: column;    /* apila botones verticalmente */
+    gap: 12px;                 /* espacio entre botones */
+    align-items: center;       /* centrado horizontal */
+  }
+
+  .contacto-actions .action-btn{
+    width: 80%;                /* ancho uniforme */
+    text-align: center;
+  }
+
+  .hero-inferior-imagen{ max-width:90%; }
+}
+
 
 
 
