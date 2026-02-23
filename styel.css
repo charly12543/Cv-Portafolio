@@ -1,6 +1,6 @@
 /* =====================================================
-PORTFOLIO PRO CSS — ULTRA CLEAN FINAL
-Sin duplicados • Alturas iguales • Animaciones fluidas
+PORTFOLIO PRO CSS — FINAL STABLE BUILD
+Sin duplicados, responsive y sin romper Bootstrap
 ===================================================== */
 
 /* ================= ROOT ================= */
@@ -40,7 +40,6 @@ section{
 .navbar-custom .nav-link{
   color:var(--text-dark)!important;
   font-weight:500;
-  transition:.25s;
 }
 
 .navbar-custom .nav-link:hover{
@@ -48,23 +47,31 @@ section{
 }
 
 /* ================= HERO ================= */
-.hero-principal{ margin-bottom:40px; }
+.hero{ text-align:center; min-height:520px; }
 
 .hero-foto-perfil{
-  height:190px;
-  width:175px;
+  height:180px;
+  width:180px;
   border-radius:50%;
-  margin:20px;
+  margin:20px auto;
+  display:block;
   box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
+/* Banner corregido */
+.hero-inferior{
+  margin-top:30px;
+  text-align:center;
+}
+
 .hero-inferior-imagen{
-  max-width:560px;
+  max-width:520px;
   width:90%;
-  margin:25px auto;
+  display:block;
+  margin:30px auto; /* centrado FIX */
   border-radius:18px;
-  box-shadow:0 20px 50px rgba(0,0,0,.18);
-  transition:.45s cubic-bezier(.2,.65,.3,1);
+  box-shadow:0 25px 60px rgba(0,0,0,.18);
+  transition:transform .4s ease;
 }
 
 .hero-inferior-imagen:hover{
@@ -79,8 +86,8 @@ section{
 
 .seccion-texto{
   max-width:720px;
+  margin:auto;
   color:var(--text-soft);
-  line-height:1.7;
 }
 
 /* ================= IMPACTO ================= */
@@ -95,44 +102,44 @@ section{
   background:white;
   border-radius:18px;
   padding:30px;
-  border:1px solid rgba(0,0,0,.04);
+  transition:all .4s ease;
   box-shadow:0 15px 40px rgba(0,0,0,.08);
-  transition:.45s cubic-bezier(.2,.65,.3,1);
 }
 
 .impacto-card:hover{
-  transform:translateY(-12px) scale(1.04);
+  transform:translateY(-10px) scale(1.04);
   background:#f1f5f9;
-  box-shadow:0 35px 90px rgba(0,0,0,.18);
+  box-shadow:0 35px 90px rgba(0,0,0,.2);
 }
 
-/* ================= EXPERIENCIA ================= */
-/* Igualar altura columnas */
-.experiencia .row{
-  display:flex;
-  flex-wrap:wrap;
-}
-
-.experiencia .col-md-4{
-  display:flex;
-}
-
-/* Tarjeta experiencia */
-.columna{
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
+.impacto-card img{
   width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* ================= EXPERIENCIA (FIX GRID) ================= */
+
+/* NO tocar grid de Bootstrap */
+.experiencia .row{
+  align-items:stretch; /* igual altura */
+}
+
+/* Cards */
+.columna{
   background:white;
   border-radius:20px;
-  padding:26px 22px;
-  border:1px solid rgba(0,0,0,.05);
+  padding:28px 24px;
+  margin-bottom:25px;
+  height:100%;
+  transition:all .35s ease;
   box-shadow:0 15px 40px rgba(0,0,0,.08);
-  transition:.45s cubic-bezier(.2,.65,.3,1);
+  border:1px solid rgba(0,0,0,.05);
 }
 
 .columna:hover{
-  transform:translateY(-10px) scale(1.025);
+  transform:translateY(-8px) scale(1.02);
   background:#f8fafc;
   box-shadow:0 30px 80px rgba(0,0,0,.18);
 }
@@ -143,17 +150,12 @@ section{
   color:var(--accent);
 }
 
-.experiencia-titulo{
-  font-weight:600;
-  margin:10px 0 15px;
-}
-
 .columna ul{
+  padding-left:18px;
   text-align:left;
-  line-height:1.6;
 }
 
-/* ================= PROYECTOS ================= */
+/* ================= PROYECTOS (trayectoria dinámica FIX) ================= */
 .proyecto{
   position:relative;
   overflow:hidden;
@@ -165,7 +167,7 @@ section{
   height:220px;
   object-fit:cover;
   border-radius:18px;
-  transition:.35s;
+  transition:.35s ease;
 }
 
 .overlay{
@@ -173,11 +175,11 @@ section{
   inset:0;
   opacity:0;
   background:rgba(0,0,0,.65);
+  color:white;
   display:flex;
   justify-content:center;
   align-items:center;
-  color:white;
-  transition:.35s;
+  transition:.35s ease;
 }
 
 .proyecto:hover img{
@@ -185,7 +187,24 @@ section{
   opacity:.35;
 }
 
-.proyecto:hover .overlay{ opacity:1; }
+.proyecto:hover .overlay{
+  opacity:1;
+}
+
+/* ================= TIMELINE ================= */
+.timeline-content{
+  padding:20px;
+  border-radius:14px;
+  background:white;
+  transition:.3s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.timeline-content:hover{
+  transform:translateY(-6px);
+  background:#f8fafc;
+  box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
 
 /* ================= REVEAL ================= */
 .reveal{
@@ -201,32 +220,25 @@ section{
 
 /* ================= DARK MODE ================= */
 body.dark-mode{
-  background:radial-gradient(circle at top,#0b1120,#020617);
+  background:radial-gradient(circle at top,#0b1120 0%,#020617 100%);
   color:#e5e7eb;
 }
 
-body.dark-mode .navbar-custom{
-  background:rgba(2,6,23,.85)!important;
-}
-
+body.dark-mode .columna,
 body.dark-mode .impacto-card,
-body.dark-mode .columna{
+body.dark-mode .timeline-content{
   background:rgba(15,23,42,.75);
   border:1px solid rgba(148,163,184,.15);
   box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
+body.dark-mode .columna:hover,
 body.dark-mode .impacto-card:hover,
-body.dark-mode .columna:hover{
+body.dark-mode .timeline-content:hover{
   background:rgba(30,41,59,.9);
-  box-shadow:0 25px 70px rgba(0,0,0,.6);
-}
-
-body.dark-mode .columna i{
-  color:#60a5fa;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:767px){
-  .navbar-brand{ display:none; }
+  .hero-inferior-imagen{ max-width:90%; }
 }
