@@ -586,7 +586,69 @@ Compatible con tu HTML y dark mode
   transform: translateY(-3px) scale(1.025);
   box-shadow:0 20px 50px rgba(0,0,0,.15);
 }
+/* =====================================================
+APPLE PATCH FASE 4 — DETALLES FINOS
+Navbar, sección activa, badges y footer
+Compatible con HTML y dark mode
+===================================================== */
 
+/* 1️⃣ Navbar refinada (blur + transición suave) */
+.navbar-custom{
+  backdrop-filter:blur(18px); /* más premium */
+  background:rgba(255,255,255,0.85);
+  transition:background .35s ease, backdrop-filter .35s ease;
+}
+
+.navbar-custom .nav-link{
+  transition: color .25s ease, transform .25s ease;
+}
+
+.navbar-custom .nav-link:hover{
+  transform:translateY(-2px);
+}
+
+/* 2️⃣ Indicador sección activa (scroll spy feel) */
+.navbar-custom .nav-link.active{
+  color:var(--accent) !important;
+  font-weight:700;
+  position:relative;
+}
+
+.navbar-custom .nav-link.active::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:var(--accent);
+  border-radius:2px;
+}
+
+/* 3️⃣ Footer / contacto ultra centrado y glow */
+.contacto-ultra{
+  padding:140px 20px; /* más aire */
+  border-radius:32px;
+  background:linear-gradient(145deg,#f8fafc,#ffffff);
+  box-shadow:0 28px 90px rgba(0,0,0,.10);
+}
+
+.contacto-ultra::before{
+  width:320px;
+  height:320px;
+  top:-90px;
+  right:-90px;
+  filter:blur(22px);
+}
+
+/* 4️⃣ Links y badges micro-hover */
+a.nav-link, .badge, .badges-contenedor button{
+  transition: all .25s cubic-bezier(.25,.8,.25,1);
+}
+
+a.nav-link:hover, .badge:hover, .badges-contenedor button:hover{
+  transform:translateY(-2px) scale(1.02);
+}
 
 
 
