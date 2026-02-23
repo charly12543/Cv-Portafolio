@@ -269,6 +269,44 @@ body.dark-mode .gallery img{
   box-shadow:0 15px 35px rgba(0,0,0,.6);
 }
 
+/* ================= CERTIFICADOS UNIFORMES ================= */
+
+.impacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.impacto-card {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.impacto-card img {
+  width: 100%;
+  height: 180px;           /* 🔥 altura uniforme */
+  object-fit: cover;       /* mantiene proporción sin deformar */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Hover PRO */
+.impacto-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Dark mode sombra */
+.dark-mode .impacto-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.dark-mode .impacto-card img {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width:767px){
   .navbar-brand{ display:none; }
