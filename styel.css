@@ -64,14 +64,19 @@ section{
   text-align:center;
 }
 
+/* Logo Tecno tamaño original */
 .hero-inferior-imagen{
-  max-width:520px;
-  width:90%;
+  max-width:380px;   /* antes 520px */
+  width:80%;
   display:block;
-  margin:30px auto; /* centrado FIX */
+  margin:25px auto;
   border-radius:18px;
-  box-shadow:0 25px 60px rgba(0,0,0,.18);
-  transition:transform .4s ease;
+  box-shadow:0 20px 50px rgba(0,0,0,.15);
+  transition:transform .35s ease;
+}
+
+.hero-inferior-imagen:hover{
+  transform:translateY(-5px) scale(1.02);
 }
 
 .hero-inferior-imagen:hover{
@@ -98,12 +103,29 @@ section{
   margin-top:40px;
 }
 
+/* IMPACTO PROFESIONAL DINÁMICO */
 .impacto-card{
   background:white;
   border-radius:18px;
   padding:30px;
-  transition:all .4s ease;
+  transition:
+    transform .45s cubic-bezier(.2,.65,.3,1),
+    box-shadow .45s ease,
+    background .3s ease;
   box-shadow:0 15px 40px rgba(0,0,0,.08);
+  border:1px solid rgba(0,0,0,.04);
+}
+
+.impacto-card:hover{
+  transform:translateY(-12px) scale(1.04);
+  background:#f1f5f9;
+  box-shadow:0 35px 90px rgba(0,0,0,.2);
+}
+
+/* dark mode */
+body.dark-mode .impacto-card:hover{
+  background:rgba(30,41,59,.85);
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
 }
 
 .impacto-card:hover{
@@ -236,6 +258,28 @@ body.dark-mode .columna:hover,
 body.dark-mode .impacto-card:hover,
 body.dark-mode .timeline-content:hover{
   background:rgba(30,41,59,.9);
+}
+
+/* ===== EXPERIENCIA CARDS MISMO TAMAÑO ===== */
+
+.experiencia .row{
+  align-items:stretch;
+}
+
+.experiencia .col-md-4{
+  display:flex;
+}
+
+.columna{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  height:100%;
+}
+
+/* spacing interno uniforme */
+.columna ul{
+  flex-grow:1;
 }
 
 /* ================= RESPONSIVE ================= */
