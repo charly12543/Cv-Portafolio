@@ -434,5 +434,29 @@
       });
     </script>
 
+<script>
+  function ajustarAlturaExperiencia() {
+    const columnas = document.querySelectorAll('.experiencia .columna');
+    let maxHeight = 0;
+
+    // Resetear altura antes de medir
+    columnas.forEach(col => col.style.minHeight = 'auto');
+
+    // Medir la altura máxima
+    columnas.forEach(col => {
+      const colHeight = col.offsetHeight;
+      if(colHeight > maxHeight) maxHeight = colHeight;
+    });
+
+    // Aplicar altura máxima a todas
+    columnas.forEach(col => col.style.minHeight = maxHeight + 'px');
+  }
+
+  // Ejecutar al cargar la página
+  window.addEventListener('load', ajustarAlturaExperiencia);
+
+  // Ejecutar al redimensionar ventana
+  window.addEventListener('resize', ajustarAlturaExperiencia);
+</script>        
 </body>
 </html>
