@@ -465,6 +465,78 @@ h1, h2, h3, .seccion-titulo{
   line-height:1.65; /* más aire para lectura */
 }
 
+/* =====================================================
+APPLE PATCH FASE 2 — UX QUIRÚRGICO
+Hero hierarchy + Sobre mí + Stack grid
+===================================================== */
+
+/* 1️⃣ Hero hierarchy */
+.hero h1{
+  font-size:3rem;         /* más grande que h2/h3 */
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.hero h2{
+  font-size:1.6rem;
+  font-weight:600;
+  color:var(--accent);
+  margin-bottom:6px;
+}
+
+.hero h3{
+  font-size:1.2rem;
+  font-weight:500;
+  color:var(--text-soft);
+}
+
+/* Ajuste spacing hero general */
+.hero-principal{
+  gap:8px; /* espacio uniforme entre elementos */
+}
+
+/* 2️⃣ Sobre mí legibilidad */
+.sobre-mi .seccion-texto{
+  max-width:680px;   /* ya estaba 720px, + Apple feel */
+  line-height:1.75;  /* más aire */
+  font-size:1.05rem; /* ligero aumento */
+  color:var(--text-soft);
+  text-align:center;
+  margin:auto;
+}
+
+/* 3️⃣ Stack grid / chips para escaneo rápido */
+.experiencia .columna ul{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding-left:0;   /* eliminar padding de lista tradicional */
+  list-style:none;
+}
+
+.experiencia .columna ul li{
+  background:var(--bg-light);
+  padding:6px 12px;
+  border-radius:12px;
+  font-size:0.88rem;
+  color:var(--text-dark);
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.experiencia .columna ul li:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+
+
+
+
+
+
+
+
 /* ================= RESPONSIVE ================= */
 @media (max-width:767px){
   .hero-inferior-imagen{ max-width:90%; }
