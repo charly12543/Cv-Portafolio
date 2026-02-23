@@ -650,6 +650,36 @@ a.nav-link:hover, .badge:hover, .badges-contenedor button:hover{
   transform:translateY(-2px) scale(1.02);
 }
 
+/* =====================================================
+EXPERIENCIA / CURSOS / STACK — CARD HEIGHT UNIFORME
+Objetivo: todas las cards tengan la misma altura que la más grande
+Compatible con tu grid y responsive
+===================================================== */
+
+/* Forzamos altura mínima igual para todas las columnas en desktop */
+@media (min-width:768px){
+  .experiencia .col-md-4{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .experiencia .columna{
+    flex:1;                 /* ocupa todo el espacio disponible */
+    min-height: 580px;       /* ajustar según la altura de "Experiencia profesional" */
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    transition:all .35s ease; /* mantiene hover suave */
+  }
+}
+
+/* Móvil: deja auto para que no rompa */
+@media (max-width:767px){
+  .experiencia .columna{
+    min-height:auto;
+  }
+}
+
 
 
 
