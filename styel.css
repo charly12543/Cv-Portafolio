@@ -528,7 +528,64 @@ Hero hierarchy + Sobre mí + Stack grid
   transform:translateY(-2px);
   box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
+/* =====================================================
+APPLE PATCH FASE 3 — MICRO ANIMACIONES & CARDS
+Compatible con tu HTML y dark mode
+===================================================== */
 
+/* 1️⃣ Reveal scroll smoother */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition: all 0.8s cubic-bezier(.25,.8,.25,1); /* más suave que antes */
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* 2️⃣ Hero inferior micro-hover */
+.hero-inferior-imagen{
+  transition:transform .5s cubic-bezier(.25,.8,.25,1), box-shadow .5s ease;
+}
+
+.hero-inferior-imagen:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 25px 65px rgba(0,0,0,.18);
+}
+
+/* 3️⃣ Cards impacto & experiencia micro-interaction */
+.impacto-card, .columna, .timeline-content, .proyecto{
+  transition: transform .35s cubic-bezier(.25,.8,.25,1), 
+              box-shadow .35s ease, 
+              background .35s ease;
+}
+
+.impacto-card:hover, .columna:hover, .timeline-content:hover, .proyecto:hover{
+  transform: translateY(-8px) scale(1.025);
+  box-shadow:0 28px 75px rgba(0,0,0,.18);
+}
+
+/* 4️⃣ Proyectos overlay micro-interaction */
+.proyecto .overlay{
+  transition:opacity .35s ease, transform .35s ease;
+}
+
+.proyecto:hover .overlay{
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* 5️⃣ Buttons micro-hover refinement */
+.btn, .action-btn{
+  transition: all .35s cubic-bezier(.25,.8,.25,1);
+}
+
+.btn:hover, .action-btn:hover{
+  transform: translateY(-3px) scale(1.025);
+  box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
 
 
 
