@@ -1,11 +1,11 @@
 /* =====================================================
-PORTFOLIO PRO CSS — Clean Recruiter Edition
+PORTFOLIO PRO CSS — CLEAN FINAL BUILD
+Optimizado + sin duplicados
 ===================================================== */
 
 /* ================= ROOT ================= */
 :root{
   --bg-light: #f5f7fa;
-  --bg-white: #ffffff;
   --text-dark: #0f172a;
   --text-soft: #64748b;
   --accent: #2563eb;
@@ -16,13 +16,13 @@ body{
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
   background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%);
   color: var(--text-dark);
-  transition: background .4s ease, color .4s ease;
+  transition: background .35s ease, color .35s ease;
 }
 
 html{ scroll-behavior: smooth; }
 
 section{
-  padding: 80px 20px;
+  padding: 70px 20px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -37,43 +37,19 @@ section{
   backdrop-filter: blur(14px);
   background: rgba(255,255,255,0.75);
   border-bottom: 1px solid rgba(0,0,0,0.08);
-  animation: fadeDown .6s ease;
 }
 
-.navbar-brand img{
-  height: 42px;
-}
+.navbar-brand img{ height: 42px; }
 
 .navbar-custom .nav-link{
   color: var(--text-dark) !important;
   font-weight: 500;
   margin: 0 6px;
-  position: relative;
-  transition: .25s ease;
+  transition:.25s ease;
 }
 
 .navbar-custom .nav-link:hover{
   color: var(--accent) !important;
-}
-
-.navbar-custom .nav-link::after{
-  content:"";
-  position:absolute;
-  bottom:-4px;
-  left:0;
-  width:0%;
-  height:2px;
-  background:linear-gradient(90deg,#60a5fa,#22d3ee);
-  transition:.3s ease;
-}
-
-.navbar-custom .nav-link:hover::after{
-  width:100%;
-}
-
-@keyframes fadeDown{
-  from{ opacity:0; transform:translateY(-12px); }
-  to{ opacity:1; transform:translateY(0); }
 }
 
 /* ================= HERO ================= */
@@ -106,20 +82,6 @@ section{
   line-height:1.7;
 }
 
-/* ================= EXPERIENCIA ================= */
-.experiencia .columna{
-  padding:24px;
-  border-radius:18px;
-  border:1px solid rgba(0,0,0,.08);
-  transition:.3s ease;
-}
-
-.experiencia .columna:hover{
-  transform:translateY(-8px);
-  background:linear-gradient(135deg,#2563eb,#4f8cff);
-  color:white;
-}
-
 /* ================= PROYECTOS ================= */
 .proyecto{
   position:relative;
@@ -145,7 +107,6 @@ section{
   background:rgba(0,0,0,.65);
   color:white;
   display:flex;
-  flex-direction:column;
   justify-content:center;
   align-items:center;
   transition:.35s ease;
@@ -154,19 +115,7 @@ section{
 .proyecto:hover img{ transform:scale(1.05); opacity:.35; }
 .proyecto:hover .overlay{ opacity:1; }
 
-.descripcion-proyecto{
-  margin-top:12px;
-  margin-bottom:30px;
-  line-height:1.5;
-  min-height:70px;
-}
-
-.proyectos-contenedor{
-  margin-bottom:80px;
-}
-
-/* ================= CONTACTO FINAL ================= */
-
+/* ================= CONTACTO ================= */
 .contacto-ultra{
   padding:120px 20px;
   display:flex;
@@ -175,214 +124,45 @@ section{
   background:linear-gradient(180deg,#f8fafc,#ffffff);
 }
 
-.contacto-container{
-  text-align:center;
-  max-width:700px;
-}
-
 .contacto-title{
-  font-size:2.8rem;
+  font-size:2.6rem;
   font-weight:800;
-  letter-spacing:-1.2px;
   margin-bottom:15px;
 }
 
 .contacto-sub{
   color:var(--text-soft);
-  font-size:1.1rem;
   margin-bottom:40px;
-}
-
-.contacto-actions{
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
 }
 
 .action-btn{
   padding:14px 28px;
   border-radius:999px;
-  text-decoration:none;
   font-weight:600;
-  transition:.3s ease;
-  display:flex;
-  align-items:center;
-  gap:8px;
   background:#111;
   color:white;
-  position:relative;
-  overflow:hidden;
+  transition:.3s ease;
 }
 
 .action-btn:hover{
   transform:translateY(-4px);
-  box-shadow:0 15px 30px rgba(0,0,0,.2);
 }
 
-/* Shine */
-.action-btn::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  top:0;
-  left:-100%;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,.3),transparent);
-  transition:.5s;
-}
-
-.action-btn:hover::after{
-  left:100%;
-}
-
-.whatsapp:hover{ background:#25D366; }
-.phone:hover{ background:#0d6efd; }
-.mail:hover{ background:#ff4d4d; }
-
-/* ================= DARK MODE ================= */
-
-body.dark-mode{
-  background:radial-gradient(circle at top,#1c1c1c 0%,#0f0f0f 100%);
-  color:#e4e4e4;
-}
-
-body.dark-mode .navbar-custom{
-  background:rgba(18,18,18,.85);
-  border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-body.dark-mode .seccion-texto{
-  color:#cbd5f5;
-}
-
-body.dark-mode .overlay{
-  background:rgba(0,0,0,.8);
-}
-
-body.dark-mode .contacto-ultra{
-  background:linear-gradient(180deg,#0f172a,#020617);
-}
-
-body.dark-mode .contacto-title{
-  color:#f1f5f9;
-}
-
-body.dark-mode .contacto-sub{
-  color:#94a3b8;
-}
-
-body.dark-mode .action-btn{
-  background:#1e293b;
-}
-
-/* ================= HERO INFERIOR FIX ================= */
-
-.hero-inferior{
-  margin-top: 30px;
-}
-
+/* ================= HERO IMAGE ================= */
 .hero-inferior-imagen{
-  max-width: 480px;
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  max-width:520px;
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 25px 70px rgba(0,0,0,0.15);
   transition: transform .35s ease, box-shadow .35s ease;
 }
 
-/* Hover moderno tipo Apple */
 .hero-inferior-imagen:hover{
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
-}
-
-/* Dark mode */
-body.dark-mode .hero-inferior-imagen{
-  box-shadow: 0 25px 70px rgba(0,0,0,0.6);
-}
-
-/* ================= HERO – IMAGEN PRO ================= */
-.hero-inferior {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-inferior-imagen {
-  max-width: 520px; /* más ancho que antes para balancear */
-  width: 100%;
-  border-radius: 20px;
-  transition: transform .35s ease, box-shadow .35s ease;
-  box-shadow: 0 25px 70px rgba(0,0,0,0.15);
-}
-
-.hero-inferior-imagen:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 30px 90px rgba(0,0,0,0.25);
 }
 
-/* Ajustes en dark mode */
-body.dark-mode .hero-inferior-imagen {
-  box-shadow: 0 28px 80px rgba(0,0,0,0.55);
-}
-
-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-/* ================= ANIMACIONES SCROLL PRO ================= */
-
-/* Estado inicial (invisible) */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all .8s cubic-bezier(.22,.61,.36,1);
-}
-
-/* Cuando aparece */
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Variantes opcionales */
-.reveal-left {
-  transform: translateX(-40px);
-}
-
-.reveal-right {
-  transform: translateX(40px);
-}
-
-.reveal.visible.reveal-left,
-.reveal.visible.reveal-right {
-  transform: translateX(0);
-}
-
-/* ===== REVEAL ANIMATIONS ===== */
-.reveal{
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all .8s cubic-bezier(.2,.65,.3,1);
-}
-
-.reveal.active{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* direcciones */
-.reveal-left{ transform: translateX(-60px); }
-.reveal-right{ transform: translateX(60px); }
-
-/* delays tipo Apple */
-.delay-1{ transition-delay: .15s; }
-.delay-2{ transition-delay: .3s; }
-.delay-3{ transition-delay: .45s; }
-
+/* ================= IMPACT CARDS ================= */
 .impacto-grid{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
@@ -403,199 +183,93 @@ section {
   box-shadow:0 30px 70px rgba(0,0,0,.15);
 }
 
-body.dark-mode .impacto-card{
-  background:#1e293b;
+/* ================= REVEAL ANIMATION ================= */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition: all .7s cubic-bezier(.2,.65,.3,1);
 }
 
-/* ================= DARK MODE ================= */
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =====================================================
+🌙 DARK MODE — UNIVERSAL CLEAN
+===================================================== */
+
 body.dark-mode{
-  background:radial-gradient(circle at top,#1c1c1c 0%,#0f0f0f 100%);
-  color:#e4e4e4;
+  background: radial-gradient(circle at top, #0b1120 0%, #020617 100%);
+  color:#e5e7eb;
 }
 
+/* Navbar */
+body.dark-mode .navbar,
 body.dark-mode .navbar-custom{
-  background:rgba(18,18,18,.85);
-  border-bottom:1px solid rgba(255,255,255,.05);
+  background: rgba(2, 6, 23, 0.85) !important;
+  border-bottom:1px solid rgba(148,163,184,.1);
 }
 
-body.dark-mode .seccion-texto{
-  color:#cbd5f5;
+body.dark-mode .nav-link{ color:#e5e7eb !important; }
+
+/* Cards */
+body.dark-mode .card,
+body.dark-mode .impacto-card{
+  background: rgba(15,23,42,.75);
+  border:1px solid rgba(148,163,184,.15);
+  box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
+/* Textos */
+body.dark-mode .seccion-texto,
+body.dark-mode .hero-subtitle,
+body.dark-mode .contacto-sub{
+  color:#94a3b8;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3{
+  color:#f1f5f9;
+}
+
+/* Overlay */
 body.dark-mode .overlay{
   background:rgba(0,0,0,.8);
 }
 
+/* Botones */
+body.dark-mode .btn-outline-dark{
+  border-color:#e5e7eb;
+  color:#e5e7eb;
+}
+
+body.dark-mode .btn-outline-dark:hover{
+  background:#e5e7eb;
+  color:#020617;
+}
+
+/* Hero imagen */
+body.dark-mode .hero-inferior-imagen{
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+
+/* Contacto */
 body.dark-mode .contacto-ultra{
-  background:linear-gradient(180deg,#0f172a,#020617);
-}
-
-body.dark-mode .contacto-title{
-  color:#f1f5f9;
-}
-
-body.dark-mode .contacto-sub{
-  color:#94a3b8;
+  background:linear-gradient(180deg,#020617,#020617);
 }
 
 body.dark-mode .action-btn{
   background:#1e293b;
 }
 
-body.dark-mode .impacto-card{
-  background:#1e293b;
-}
-
-/* ================= MEDIA QUERY MOBILE ================= */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: radial-gradient(circle at top,#1c1c1c 0%,#0f0f0f 100%);
-    color: #e4e4e4;
-  }
-  .navbar-custom {
-    background: rgba(18,18,18,.85);
-    border-bottom:1px solid rgba(255,255,255,.05);
-  }
-  .seccion-texto {
-    color:#cbd5f5;
-  }
-}
-
-/* =====================================================
-🌙 DARK MODE FIX UNIVERSAL — PORTFOLIO PRO
-Compatible con Bootstrap + multi páginas
-===================================================== */
-
-/* ===== BASE GLOBAL ===== */
-body.dark-mode {
-  background: radial-gradient(circle at top, #0b1120 0%, #020617 100%);
-  color: #e5e7eb;
-}
-
-/* Smooth transition */
-body,
-.navbar,
-.card,
-section {
-  transition: background .35s ease, color .35s ease, border-color .35s ease;
-}
-
-/* ===== NAVBAR ===== */
-body.dark-mode .navbar,
-body.dark-mode .navbar-custom {
-  background: rgba(2, 6, 23, 0.85) !important;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-}
-
-body.dark-mode .nav-link {
-  color: #e5e7eb !important;
-}
-
-/* ===== BOOTSTRAP OVERRIDES ===== */
-body.dark-mode .bg-light,
-body.dark-mode .bg-white,
-body.dark-mode .bg-body-tertiary {
-  background-color: #020617 !important;
-}
-
-body.dark-mode .text-dark {
-  color: #e5e7eb !important;
-}
-
-body.dark-mode .border {
-  border-color: #1e293b !important;
-}
-
-/* ===== SECTIONS ===== */
-body.dark-mode section,
-body.dark-mode main,
-body.dark-mode header {
-  background: transparent;
-}
-
-/* ===== CARDS (glass style universal) ===== */
-body.dark-mode .card,
-body.dark-mode .glass-card,
-body.dark-mode .impacto-card,
-body.dark-mode .cert-card {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-}
-
-/* Hover premium */
-body.dark-mode .card:hover,
-body.dark-mode .impacto-card:hover {
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-}
-
-/* ===== TEXTOS ===== */
-body.dark-mode .seccion-texto,
-body.dark-mode .hero-subtitle,
-body.dark-mode .contacto-sub {
-  color: #94a3b8;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode .contacto-title {
-  color: #f1f5f9;
-}
-
-/* ===== OVERLAYS ===== */
-body.dark-mode .overlay {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/* ===== BOTONES ===== */
-body.dark-mode .btn-outline-dark {
-  border-color: #e5e7eb;
-  color: #e5e7eb;
-}
-
-body.dark-mode .btn-outline-dark:hover {
-  background: #e5e7eb;
-  color: #020617;
-}
-
-/* ===== HERO IMAGE SHADOW ===== */
-body.dark-mode .hero-inferior-imagen {
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-}
-
-/* ===== CONTACTO ===== */
-body.dark-mode .contacto-ultra {
-  background: linear-gradient(180deg, #020617, #020617);
-}
-
-body.dark-mode .action-btn {
-  background: #1e293b;
-}
-
-/* ===== FIX CERTIFICADOS PAGE ===== */
-body.dark-mode .certificados-container,
-body.dark-mode .timeline,
-body.dark-mode .cert-wrapper {
-  background: transparent;
-}
-
-/* ===== SCROLL REVEAL COMPAT ===== */
-body.dark-mode .reveal {
-  opacity: 0.95;
-}
-
-/* ===== MOBILE SAFE ===== */
-@media (max-width: 768px) {
-  body.dark-mode {
-    background: #020617;
-  }
+/* Certificados fix */
+body.dark-mode .gallery img{
+  box-shadow:0 15px 35px rgba(0,0,0,.6);
 }
 
 /* ================= RESPONSIVE ================= */
-
 @media (max-width:767px){
   .navbar-brand{ display:none; }
 }
